@@ -18,3 +18,8 @@
 %transition {
   transition: all 0.2s ease-in-out;
 }
+
+%text-opacity {
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}

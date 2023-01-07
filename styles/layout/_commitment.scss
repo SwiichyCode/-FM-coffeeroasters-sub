@@ -1,0 +1,26 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/variables" as *;
+
+.commitment {
+  @extend %flex-column;
+  gap: 48px;
+
+  img {
+    border-radius: $border-rounded;
+  }
+
+  article {
+    @extend %flex-column;
+    text-align: center;
+    gap: 30px;
+  }
+
+  h2 {
+    color: $color-secondary;
+  }
+
+  p {
+    @extend %text-opacity;
+    color: $color-secondary;
+  }
+}
