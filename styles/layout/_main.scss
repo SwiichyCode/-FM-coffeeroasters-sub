@@ -1,0 +1,6 @@
+@use "../abstracts/mixins" as *;
+
+.main {
+  @include flex-column;
+  gap: 120px;
+}

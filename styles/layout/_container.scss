@@ -2,7 +2,8 @@
 @use "../abstracts/variables" as *;
 
 .container {
-  @include flex-center;
-  height: 100vh;
+  // @include flex-center;
+  // height: 100vh;
   background: $color-quaternary;
+  padding: 32px 24px 72px 24px;
 }

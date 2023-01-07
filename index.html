@@ -15,8 +15,103 @@
   </head>
   <body>
     <div class="container">
-      <h1>Title</h1>
-      <p>paragraphe</p>
+      <header class="header">
+        <div class="header__wrapper">
+          <a class="header__homelink" href="/">
+            <img
+              class="header__logo"
+              src="assets/shared/desktop/logo.svg"
+              alt="logo"
+              loading="lazy"
+            />
+          </a>
+          <button class="header__hamburgerBtn">
+            <img
+              class="header__hamburgerBtn--icon"
+              src="assets/shared/mobile/icon-hamburger.svg"
+              loading="lazy"
+            />
+          </button>
+        </div>
+      </header>
+      <main class="main">
+        <section class="hero">
+          <div class="hero__wrapper">
+            <h1 class="hero__title">Great coffee made simple</h1>
+            <p class="hero__subtitle">
+              Start your mornings with the world’s best coffees. Try our
+              expertly curated artisan coffees from our best roasters delivered
+              directly to your door, at your schedule.
+            </p>
+            <button id="btn-createPlan" class="hero--btn btn">
+              Create your plan
+            </button>
+          </div>
+        </section>
+        <section class="collection">
+          <div class="title-wrapper">
+            <h1 class="collection__title">our collection</h1>
+          </div>
+          <div class="collection__wrapper">
+            <article class="collection__wrapper--article">
+              <img
+                src="assets/home/desktop/image-gran-espresso.png"
+                alt="gran-espresso"
+                loading="lazy"
+              />
+              <div>
+                <h4>Gran Espresso</h4>
+                <p>
+                  Light and flavorful blend with cocoa and black pepper for an
+                  intense experience
+                </p>
+              </div>
+            </article>
+            <article class="collection__wrapper--article">
+              <img
+                src="assets/home/desktop/image-planalto.png"
+                alt="planalto"
+                loading="lazy"
+              />
+              <div>
+                <h4>Planalto</h4>
+                <p>
+                  Brazilian dark roast with rich and velvety body, and hints of
+                  fruits and nuts
+                </p>
+              </div>
+            </article>
+            <article class="collection__wrapper--article">
+              <img
+                src="assets/home/desktop/image-piccollo.png"
+                alt="piccollo"
+                loading="lazy"
+              />
+              <div>
+                <h4>Gran Espresso</h4>
+                <p>
+                  Light and flavorful blend with cocoa and black pepper for an
+                  intense experience
+                </p>
+              </div>
+            </article>
+            <article class="collection__wrapper--article">
+              <img
+                src="assets/home/desktop/image-danche.png"
+                alt="danche"
+                loading="lazy"
+              />
+              <div>
+                <h4>Danche</h4>
+                <p>
+                  Ethiopian hand-harvested blend densely packed with vibrant
+                  fruit notes
+                </p>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
     </div>
     <script type="module" src="/main.js"></script>
   </body>
