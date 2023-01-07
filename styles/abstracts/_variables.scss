@@ -4,5 +4,11 @@ $color-secondary: #333d4b;
 $color-tertiary: #fdd6ba;
 $color-quaternary: #fefcf7;
 $color-quinary: #83888f;
+$color-senary: #a9acb0;
 $btn-hover: #66d2cf;
 $btn-disabled: #e2dedb;
+$title-gradient: linear-gradient(
+  180deg,
+  $color-senary 0%,
+  $color-quaternary 100%
+);

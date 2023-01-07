@@ -5,7 +5,7 @@
   .title-wrapper {
     @include flex-center;
     min-height: 72px;
-    background: linear-gradient(180deg, #a9acb0 0%, #fefcf7 100%);
+    background: $title-gradient;
     background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
