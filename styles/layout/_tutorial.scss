@@ -1,0 +1,31 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.tutorial {
+  @include flex-column;
+  align-items: center;
+  gap: 80px;
+  text-align: center;
+
+  h4 {
+    color: $color-quinary;
+  }
+
+  &__wrapper {
+    @include flex-column;
+    gap: 56px;
+
+    &--article {
+      @include flex-column;
+      gap: 24px;
+
+      h1 {
+        color: $color-tertiary;
+      }
+      h3,
+      p {
+        color: $color-secondary;
+      }
+    }
+  }
+}
