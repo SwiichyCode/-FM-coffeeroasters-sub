@@ -7,11 +7,14 @@
 @mixin flex-column {
   display: flex;
   flex-direction: column;
-  align-items: center;
 }
 
 @mixin flex-between {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@mixin transition {
+  transition: all 0.2s ease-in-out;
 }

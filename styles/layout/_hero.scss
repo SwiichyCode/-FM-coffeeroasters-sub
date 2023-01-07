@@ -1,0 +1,23 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.hero {
+  @include flex-center;
+  min-height: 500px;
+  text-align: center;
+  color: $color-quaternary;
+  background-image: url("../assets/home/mobile/image-hero-coffeepress.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  border-radius: 10px;
+  padding: 0 24px;
+
+  &__title {
+    margin-bottom: 24px;
+  }
+
+  &__subtitle {
+    margin-bottom: 39px;
+  }
+}

@@ -1,0 +1,27 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.header {
+  @include flex-column;
+  margin-bottom: 40px;
+
+  &__wrapper {
+    width: 100%;
+    @include flex-between;
+  }
+
+  &__logo {
+    width: 100%;
+    max-width: 163px;
+  }
+
+  &__hamburgerBtn {
+    @include flex-center;
+    background: transparent;
+    border: none;
+
+    &--icon {
+      cursor: pointer;
+    }
+  }
+}
