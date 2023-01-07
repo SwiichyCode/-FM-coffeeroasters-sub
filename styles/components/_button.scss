@@ -1,5 +1,5 @@
+@use "../abstracts/placeholders" as *;
 @use "../abstracts/variables" as *;
-@use "../abstracts/mixins" as *;
 
 .btn {
   width: 100%;
@@ -13,7 +13,7 @@
   font-size: 18px;
   line-height: 25px;
   cursor: pointer;
-  @include transition;
+  @extend %transition;
 
   &:hover {
     background-color: $btn-hover;
