@@ -15,6 +15,11 @@
   cursor: pointer;
   @extend %transition;
 
+  a {
+    color: $color-quaternary;
+    text-decoration: none;
+  }
+
   &:hover {
     background-color: $btn-hover;
   }

@@ -7,14 +7,17 @@
 @use "layout/_header";
 @use "layout/_main";
 @use "layout/_hero";
-@use "layout/_collection";
-@use "layout/_feature";
-@use "layout/_tutorial";
 @use "layout/_footer";
 
+// Home - layout
+@use "layout/home/_collection";
+@use "layout/home/_feature";
+@use "layout/home/_tutorial";
+
 // About - layout
-@use "layout/_commitment";
-@use "layout/_quality";
+@use "layout/about/_commitment";
+@use "layout/about/_quality";
+@use "layout/about/_headquarters";
 
 // Components
 @use "components/_button";
