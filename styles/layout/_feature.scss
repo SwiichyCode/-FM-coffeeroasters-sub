@@ -1,11 +1,11 @@
-@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
 @use "../abstracts/variables" as *;
 
 .feature {
   color: $color-quaternary;
 
   &__header {
-    @include flex-column;
+    @extend %flex-column;
     text-align: center;
     background: #2c343e;
     padding: 64px 24px 28px 24px;
@@ -15,7 +15,7 @@
 
   &__wrapper {
     position: relative;
-    @include flex-column;
+    @extend %flex-column;
     align-items: center;
     gap: 24px;
     padding-top: 36px;
@@ -32,8 +32,8 @@
     }
 
     &--article {
-      @include flex-center;
-      @include flex-column;
+      @extend %flex-center;
+      @extend %flex-column;
       width: 100%;
       max-width: 279px;
       min-height: 382px;
@@ -43,7 +43,7 @@
       gap: 56px;
 
       div {
-        @include flex-column;
+        @extend %flex-column;
         text-align: center;
         gap: 24px;
 
