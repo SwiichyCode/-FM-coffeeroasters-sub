@@ -1,6 +1,6 @@
-@use "../abstracts/mixins" as *;
+@use "../abstracts/placeholders" as *;
 
 .main {
-  @include flex-column;
+  @extend %flex-column;
   gap: 120px;
 }

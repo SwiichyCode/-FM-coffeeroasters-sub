@@ -1,0 +1,25 @@
+%flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+%flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+%flex-between {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+%transition {
+  transition: all 0.2s ease-in-out;
+}
+
+%text-opacity {
+  mix-blend-mode: normal;
+  opacity: 0.8;
+}

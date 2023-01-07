@@ -9,6 +9,12 @@
 @use "layout/_hero";
 @use "layout/_collection";
 @use "layout/_feature";
+@use "layout/_tutorial";
+@use "layout/_footer";
+
+// About - layout
+@use "layout/_commitment";
+@use "layout/_quality";
 
 // Components
 @use "components/_button";

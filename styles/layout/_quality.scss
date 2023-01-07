@@ -1,0 +1,35 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/variables" as *;
+
+.quality {
+  min-height: 509px;
+  position: relative;
+  background-image: url("../assets/about/mobile/bg-quality.png");
+  background-size: cover;
+  border-radius: $border-rounded;
+  padding: 0 24px;
+  margin-top: calc(198px - 120px);
+
+  img {
+    display: block;
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: $border-rounded;
+    width: 100%;
+    max-width: 279px;
+  }
+
+  article {
+    @extend %flex-column;
+    gap: 24px;
+    text-align: center;
+    color: $color-quaternary;
+    padding-top: 142px;
+
+    p {
+      @extend %text-opacity;
+    }
+  }
+}
