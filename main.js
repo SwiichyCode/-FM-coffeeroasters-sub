@@ -9,7 +9,7 @@ openBtn.addEventListener("click", function () {
 
 // close the navbar on scroll
 document.addEventListener("scroll", function () {
-  if (window.scrollY > 150) {
+  if (window.scrollY > 50) {
     sidenav.classList.remove("active");
     openBtn.classList.remove("close");
   }
