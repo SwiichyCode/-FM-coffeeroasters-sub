@@ -2,6 +2,7 @@
 @use "../abstracts/variables" as *;
 
 .header {
+  position: relative;
   @extend %flex-column;
   margin-bottom: 40px;
 
@@ -15,17 +16,22 @@
     max-width: 163px;
   }
 
-  #mySVG {
-    color: purple;
-  }
+  // remove this
 
   &__hamburgerBtn {
+    width: 18px;
+    height: 17px;
     @extend %flex-center;
     background: transparent;
+    background-image: url("../../assets/shared/mobile/icon-hamburger.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
     border: none;
+    cursor: pointer;
 
-    &--icon {
-      cursor: pointer;
+    &.close {
+      background-image: url("../../assets/shared/mobile/icon-close.svg");
     }
   }
 }
