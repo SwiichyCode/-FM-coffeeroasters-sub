@@ -1,6 +1,6 @@
 /* Sidenav menu */
 .sidenav {
-  height: 100vh;
+  height: calc(100vh - 200px);
   width: 100%;
   position: absolute;
   top: -100vh;
@@ -9,11 +9,11 @@
   justify-content: center;
   text-align: center;
   background: linear-gradient(
-    180deg,
-    #fefcf7 0%,
-    #fefcf7 40%,
-    rgba(254, 252, 247, 0.504981) 65.94%
+    360deg,
+    rgba(254, 252, 247, 0.504981) 0%,
+    #fefcf7 55.94%
   );
+
   transition: top 0.5s ease;
   z-index: 20;
 }
