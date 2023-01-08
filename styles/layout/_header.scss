@@ -23,7 +23,7 @@
     height: 17px;
     @extend %flex-center;
     background: transparent;
-    background-image: url("../../assets/shared/mobile/icon-hamburger.svg");
+    background-image: url("../assets/shared/mobile/icon-hamburger.svg");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: contain;
@@ -31,7 +31,7 @@
     cursor: pointer;
 
     &.close {
-      background-image: url("../../assets/shared/mobile/icon-close.svg");
+      background-image: url("../assets/shared/mobile/icon-close.svg");
     }
   }
 }
