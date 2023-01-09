@@ -1,0 +1,39 @@
+@use "../../abstracts/placeholders" as *;
+@use "../../abstracts/variables" as *;
+
+.selection {
+  @extend %flex-column;
+  gap: 110px;
+
+  &__wrapper {
+    @extend %flex-column;
+    gap: 32px;
+
+    &--header {
+      @extend %flex-between;
+
+      h4 {
+        max-width: 240px;
+        color: $color-quinary;
+      }
+    }
+
+    ul {
+      @extend %flex-column;
+      gap: 16px;
+
+      li {
+        color: $color-secondary;
+        background: #f4f1eb;
+        border-radius: 8px;
+        padding: 24px;
+        cursor: pointer;
+
+        &.selected {
+          color: $color-white;
+          background: $color-primary;
+        }
+      }
+    }
+  }
+}

@@ -1,7 +1,7 @@
 @use "../../abstracts/placeholders" as *;
 @use "../../abstracts/variables" as *;
 
-.tutorial {
+.presentation {
   @extend %flex-column;
   align-items: center;
   gap: 80px;

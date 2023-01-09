@@ -13,12 +13,16 @@
 // Home - layout
 @use "layout/home/_collection";
 @use "layout/home/_feature";
-@use "layout/home/_tutorial";
+@use "layout/home/_presentation";
 
 // About - layout
 @use "layout/about/_commitment";
 @use "layout/about/_quality";
 @use "layout/about/_headquarters";
+
+// Subscribe - layout
+@use "layout/subscribe/_tutorial";
+@use "layout/subscribe/_selection";
 
 // Components
 @use "components/_button";

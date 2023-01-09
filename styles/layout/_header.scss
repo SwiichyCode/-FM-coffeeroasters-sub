@@ -16,7 +16,7 @@
     max-width: 163px;
   }
 
-  // remove this
+  // remove this to mobile nav
 
   &__hamburgerBtn {
     width: 18px;
@@ -29,6 +29,7 @@
     background-size: contain;
     border: none;
     cursor: pointer;
+    z-index: 30;
 
     &.close {
       background-image: url("../assets/shared/mobile/icon-close.svg");
