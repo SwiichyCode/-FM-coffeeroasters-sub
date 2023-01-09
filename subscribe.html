@@ -87,13 +87,13 @@
 
         <!-- Maybe form ? -->
         <section class="selection">
-          <div class="selection__wrapper">
-            <div class="selection__wrapper--header">
+          <div class="select">
+            <label class="select__label">
               <h4>How do you drink your coffee</h4>
               <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
-            </div>
+            </label>
 
-            <ul class="items-list">
+            <ul class="items-list close">
               <li class="item">
                 <h4>Capsule</h4>
                 <p>Compatible with Nespresso systems and similar brewers</p>
@@ -114,11 +114,11 @@
             </ul>
           </div>
 
-          <div class="selection__wrapper">
-            <div class="selection__wrapper--header">
+          <div class="select">
+            <label class="select__label">
               <h4>What type of coffee?</h4>
               <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
-            </div>
+            </label>
 
             <ul class="items-list">
               <li class="item">
@@ -144,11 +144,11 @@
             </ul>
           </div>
 
-          <div class="selection__wrapper">
-            <div class="selection__wrapper--header">
+          <div class="select">
+            <label class="select__label">
               <h4>How much would you like?</h4>
               <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
-            </div>
+            </label>
 
             <ul class="items-list">
               <li class="item">
@@ -173,11 +173,11 @@
             </ul>
           </div>
 
-          <div class="selection__wrapper">
-            <div class="selection__wrapper--header">
+          <div class="select">
+            <label class="select__label">
               <h4>Want us to grind them?</h4>
               <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
-            </div>
+            </label>
 
             <ul class="items-list">
               <li class="item">
@@ -199,11 +199,11 @@
             </ul>
           </div>
 
-          <div class="selection__wrapper">
-            <div class="selection__wrapper--header">
+          <div class="select">
+            <label class="select__label">
               <h4>How often should we deliver?</h4>
               <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
-            </div>
+            </label>
 
             <ul class="items-list">
               <li class="item">
@@ -223,57 +223,60 @@
         </section>
 
         <section class="result">
-          <span class="result__title">order summary</span>
-          <p id="summary"></p>
-        </section>
+          <article class="result__wrapper">
+            <span class="result__wrapper--title">order summary</span>
+            <p id="summary"></p>
+          </article>
 
-        <!-- Footer -->
-        <footer class="footer">
-          <a class="footer__homelink" href="/">
-            <img
-              class="footer__logo"
-              src="assets/shared/mobile/logo.svg"
-              alt="logo"
-              loading="lazy"
-            />
-          </a>
-          <nav class="footer__nav">
-            <ul>
-              <li><a href="/">home</a></li>
-              <li><a href="about.html">about us</a></li>
-              <li><a href="subscribe.html">create your plan</a></li>
-            </ul>
-          </nav>
-          <nav class="footer__social">
-            <ul>
-              <li>
-                <a href=""
-                  ><img
-                    src="assets/shared/desktop/icon-facebook.svg"
-                    alt="facebook-icon"
-                    loading="lazy"
-                /></a>
-              </li>
-              <li>
-                <a href=""
-                  ><img
-                    src="assets/shared/desktop/icon-twitter.svg"
-                    alt="twitter-icon"
-                    loading="lazy"
-                /></a>
-              </li>
-              <li>
-                <a href=""
-                  ><img
-                    src="assets/shared/desktop/icon-instagram.svg"
-                    alt="instagram-icon"
-                    loading="lazy"
-                /></a>
-              </li>
-            </ul>
-          </nav>
-        </footer>
+          <button id="submit" class="btn">Create my plan!</button>
+        </section>
       </main>
+      <!-- Footer -->
+      <footer class="footer">
+        <a class="footer__homelink" href="/">
+          <img
+            class="footer__logo"
+            src="assets/shared/mobile/logo.svg"
+            alt="logo"
+            loading="lazy"
+          />
+        </a>
+        <nav class="footer__nav">
+          <ul>
+            <li><a href="/">home</a></li>
+            <li><a href="about.html">about us</a></li>
+            <li><a href="subscribe.html">create your plan</a></li>
+          </ul>
+        </nav>
+        <nav class="footer__social">
+          <ul>
+            <li>
+              <a href=""
+                ><img
+                  src="assets/shared/desktop/icon-facebook.svg"
+                  alt="facebook-icon"
+                  loading="lazy"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img
+                  src="assets/shared/desktop/icon-twitter.svg"
+                  alt="twitter-icon"
+                  loading="lazy"
+              /></a>
+            </li>
+            <li>
+              <a href=""
+                ><img
+                  src="assets/shared/desktop/icon-instagram.svg"
+                  alt="instagram-icon"
+                  loading="lazy"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </footer>
     </div>
     <script type="module" src="/main.js"></script>
   </body>

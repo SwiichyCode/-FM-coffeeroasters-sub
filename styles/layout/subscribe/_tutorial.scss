@@ -7,7 +7,7 @@
   background-size: cover;
   border-radius: $border-rounded;
   // Ignore margin on the first child
-  margin: -24px;
+  // margin: -24px;
   padding: 80px 24px;
   gap: 56px;
 
@@ -22,6 +22,10 @@
       font-size: 7.2rem;
       line-height: 7.2rem;
     }
+
+    h3 {
+      line-height: 35px;
+    }
     h3,
     p {
       color: $color-white;
@@ -34,27 +38,34 @@
 
 .result {
   @extend %flex-column;
-  background-image: url("../assets/about/mobile/bg-quality.png");
-  background-size: cover;
-  color: $color-white;
-  gap: 8px;
-  padding: 32px 25px;
+  align-items: center;
+  gap: 56px;
 
-  &__title {
-    text-transform: uppercase;
-    @extend %text-opacity;
-    opacity: 0.5;
-  }
-
-  p {
+  .result__wrapper {
+    @extend %flex-column;
+    background-image: url("../assets/about/mobile/bg-quality.png");
+    background-size: cover;
     color: $color-white;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 40px;
-    font-family: "Fraunces", serif;
+    gap: 8px;
+    padding: 32px 25px;
+    border-radius: $border-rounded;
 
-    span {
-      color: $color-primary;
+    &--title {
+      text-transform: uppercase;
+      @extend %text-opacity;
+      opacity: 0.5;
+    }
+
+    p {
+      color: $color-white;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 40px;
+      font-family: "Fraunces", serif;
+
+      span {
+        color: $color-primary;
+      }
     }
   }
 }

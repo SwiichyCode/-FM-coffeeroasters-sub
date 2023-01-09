@@ -7,7 +7,6 @@ openBtn.addEventListener("click", function () {
   openBtn.classList.toggle("close");
 });
 
-// close the navbar on scroll
 document.addEventListener("scroll", function () {
   if (window.scrollY > 50) {
     sidenav.classList.remove("active");
@@ -15,7 +14,6 @@ document.addEventListener("scroll", function () {
   }
 });
 
-// dectecting click outside of the sidenav
 document.addEventListener("click", function (e) {
   if (sidenav.classList.contains("active")) {
     if (!sidenav.contains(e.target) && !openBtn.contains(e.target)) {
@@ -24,6 +22,8 @@ document.addEventListener("click", function (e) {
     }
   }
 });
+
+// open select options
 
 const summary = [[], [], [], [], []];
 const summaryEl = document.getElementById("summary");
@@ -39,7 +39,6 @@ items.forEach((item) => {
   item.addEventListener("click", function () {
     item.classList.toggle("selected");
 
-    // get the index of the parent ul
     const parentUlIndex = Array.from(itemsList).indexOf(item.parentNode);
     summary[parentUlIndex].push(item.firstElementChild.textContent);
     if (summary[parentUlIndex].length > 1) {
@@ -67,5 +66,13 @@ items.forEach((item) => {
     }</span>, sent to me <span class="summary-item">${
       summary[4].length ? summary[4] : "__"
     }</span>." `;
+  });
+});
+
+const labels = document.querySelectorAll(".select__label");
+
+labels.forEach((label) => {
+  label.addEventListener("click", function () {
+    this.nextElementSibling.classList.toggle("active");
   });
 });
