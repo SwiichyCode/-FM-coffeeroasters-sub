@@ -4,23 +4,23 @@
 .footer {
   @extend %flex-column;
   align-items: center;
-  gap: 48px;
+  gap: 4.8rem;
   background: $bg-footer;
-  padding: 54px 0;
-  margin-top: 120px;
+  padding: 5.4rem 0;
+  margin-top: 12rem;
 
   &__nav {
     ul {
       @extend %flex-column;
       align-items: center;
-      gap: 24px;
+      gap: 2.4rem;
 
       a {
         font-weight: 700;
         color: $color-quinary;
         text-transform: uppercase;
         text-decoration: none;
-        letter-spacing: 0.923077px;
+        letter-spacing: 0.009rem;
       }
     }
   }
@@ -28,7 +28,7 @@
   &__social {
     ul {
       @extend %flex-center;
-      gap: 24px;
+      gap: 2.4rem;
     }
   }
 }

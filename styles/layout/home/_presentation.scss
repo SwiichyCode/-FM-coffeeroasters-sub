@@ -4,7 +4,7 @@
 .presentation {
   @extend %flex-column;
   align-items: center;
-  gap: 80px;
+  gap: 8rem;
   text-align: center;
 
   h4 {
@@ -13,11 +13,11 @@
 
   &__wrapper {
     @extend %flex-column;
-    gap: 56px;
+    gap: 5.6rem;
 
     &--article {
       @extend %flex-column;
-      gap: 24px;
+      gap: 2.4rem;
 
       h1 {
         color: $color-tertiary;

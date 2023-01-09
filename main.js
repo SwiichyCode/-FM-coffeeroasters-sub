@@ -1,5 +1,5 @@
-const sidenav = document.getElementById("mySidenav");
-const openBtn = document.getElementById("openBtn");
+const sidenav = document.querySelector(".sidenav");
+const openBtn = document.querySelector(".sidenav-btn");
 const closeBtn = document.getElementById("closeBtn");
 
 openBtn.addEventListener("click", function () {
@@ -23,7 +23,7 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// open select options
+//-------------------//
 
 const summary = [[], [], [], [], []];
 const summaryEl = document.getElementById("summary");

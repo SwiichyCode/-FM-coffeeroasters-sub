@@ -5,10 +5,9 @@
 // Layout
 @use "layout/_container";
 @use "layout/_header";
-@use "layout/_main";
 @use "layout/_hero";
 @use "layout/_footer";
-@use "layout/_mobile-nav";
+@use "layout/_sidenav";
 
 // Home - layout
 @use "layout/home/_collection";

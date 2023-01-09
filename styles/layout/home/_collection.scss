@@ -4,15 +4,11 @@
 .collection {
   .title-wrapper {
     @extend %flex-center;
-    min-height: 72px;
+    min-height: 7.2rem;
     background: $title-gradient;
     background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
     text-align: center;
-    margin-bottom: 13px;
+    margin-bottom: 1.3rem;
 
     h1 {
       color: transparent;
@@ -22,30 +18,30 @@
   &__wrapper {
     @extend %flex-column;
     align-items: center;
-    gap: 48px;
+    gap: 4.8rem;
 
     &--article {
       @extend %flex-column;
       align-items: center;
       text-align: center;
-      gap: 24px;
+      gap: 2.4rem;
 
       img {
         width: 100%;
-        max-width: 200px;
+        max-width: 20rem;
         object-fit: cover;
       }
 
       div {
         @extend %flex-column;
-        gap: 16px;
+        gap: 1.6rem;
 
         h4 {
           color: $color-secondary;
         }
 
         p {
-          max-width: 282px;
+          max-width: 28.2rem;
         }
       }
     }

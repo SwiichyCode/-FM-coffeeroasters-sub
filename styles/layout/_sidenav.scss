@@ -1,0 +1,57 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/variables" as *;
+
+.sidenav-btn {
+  @extend %flex-center;
+  width: 1.8rem;
+  height: 1.7rem;
+  background: transparent;
+  background-image: url("../assets/shared/mobile/icon-hamburger.svg");
+  background-size: contain;
+  border: none;
+  cursor: pointer;
+  z-index: 30;
+
+  &.close {
+    background-image: url("../assets/shared/mobile/icon-close.svg");
+  }
+}
+
+.sidenav {
+  position: absolute;
+  top: -100vh;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  background: $sidebar-gradient;
+  transition: top 0.5s ease;
+  z-index: 20;
+
+  & ul {
+    @extend %flex-column;
+    align-items: center;
+    gap: 3.2rem;
+    padding-top: 2rem;
+  }
+
+  & a {
+    font-weight: 900;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+    text-decoration: none;
+    color: $color-secondary;
+    font-family: "Fraunces";
+  }
+}
+
+.sidenav ul {
+  @extend %flex-column;
+  align-items: center;
+  gap: 3.2rem;
+  padding-top: 2rem;
+}
+
+/* Active class */
+.sidenav.active {
+  top: 6rem;
+}

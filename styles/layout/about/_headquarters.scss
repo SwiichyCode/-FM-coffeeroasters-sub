@@ -4,7 +4,7 @@
 .headquarters {
   @extend %flex-column;
   text-align: center;
-  gap: 72px;
+  gap: 7.2rem;
 
   h4 {
     color: $color-quinary;
@@ -12,14 +12,14 @@
 
   &__wrapper {
     @extend %flex-column;
-    gap: 80px;
+    gap: 8rem;
   }
 
   article {
     @extend %flex-column;
     align-items: center;
     text-align: center;
-    gap: 47px;
+    gap: 4.7rem;
 
     img {
       width: min-content;
@@ -27,7 +27,7 @@
 
     div {
       @extend %flex-column;
-      gap: 22px;
+      gap: 2.2rem;
       color: $color-secondary;
     }
   }

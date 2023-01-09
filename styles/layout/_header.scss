@@ -4,7 +4,7 @@
 .header {
   position: relative;
   @extend %flex-column;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 
   &__wrapper {
     width: 100%;
@@ -13,26 +13,6 @@
 
   &__logo {
     width: 100%;
-    max-width: 163px;
-  }
-
-  // remove this to mobile nav
-
-  &__hamburgerBtn {
-    width: 18px;
-    height: 17px;
-    @extend %flex-center;
-    background: transparent;
-    background-image: url("../assets/shared/mobile/icon-hamburger.svg");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-size: contain;
-    border: none;
-    cursor: pointer;
-    z-index: 30;
-
-    &.close {
-      background-image: url("../assets/shared/mobile/icon-close.svg");
-    }
+    max-width: 16.3rem;
   }
 }
