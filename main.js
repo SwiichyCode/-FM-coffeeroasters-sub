@@ -124,4 +124,7 @@ submitBtn.addEventListener("click", function (e) {
       container.classList.remove("backdrop");
     }
   });
+
+  //disable scroll if modal is open
+  document.body.style.overflow = "hidden";
 });
