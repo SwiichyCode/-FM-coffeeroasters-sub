@@ -127,4 +127,9 @@ submitBtn.addEventListener("click", function (e) {
 
   //disable scroll if modal is open
   document.body.style.overflow = "hidden";
+
+  // enable scroll if modal is closed
+  modal.addEventListener("click", function () {
+    document.body.style.overflow = "auto";
+  });
 });
