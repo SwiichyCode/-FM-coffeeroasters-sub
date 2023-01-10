@@ -2,7 +2,7 @@
 @use "../../abstracts/variables" as *;
 
 .preview {
-  @include flex-column($gap: $gap-8, $align-items: center);
+  @include flex-column($gap: $gap-56, $align-items: center);
 
   &__title {
     text-transform: uppercase;
