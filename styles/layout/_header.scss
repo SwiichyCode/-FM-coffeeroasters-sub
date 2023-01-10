@@ -3,13 +3,12 @@
 
 .header {
   position: relative;
-  @extend %flex-column;
+  width: 100%;
+  @extend %flex-between;
   margin-bottom: 4rem;
 
-  &__wrapper {
-    width: 100%;
-    @extend %flex-between;
-  }
+  // &__wrapper {
+  // }
 
   &__logo {
     width: 100%;
