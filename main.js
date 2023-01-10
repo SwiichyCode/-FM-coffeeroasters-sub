@@ -84,52 +84,57 @@ items.forEach((item) => {
 });
 
 const submitBtn = document.getElementById("submit");
-
 submitBtn.addEventListener("click", function (e) {
   e.preventDefault();
+  if (summary.map((item) => item.length).includes(0)) {
+    alert("Please select all options");
+    return;
+  }
 
-  // if (summary.map((item) => item.length).includes(0)) {
-  //   alert("Please select all options");
-  //   return;
-  // }
+  window.scrollTo(0, 0);
+  document.body.style.overflow = "hidden";
 
-  // create a modal
   const modal = document.createElement("div");
   modal.classList.add("modal");
   modal.innerHTML = `
-
     <div class="modal">
       <div class="modal__header"> 
         <h3 class="modal__title">Order Summary</h3>
       </div>
-      <p class="modal__text">You ordered a <span class="modal-summary">${summary[0]}</span> coffee with a <span class="modal-summary">${summary[1]}</span> type of bean. <span class="modal-summary">${summary[2]}</span> ground ala <span class="modal-summary">${summary[3]}</span>, sent to me <span class="modal-summary">${summary[4]}</span>.</p>
-      <button class="btn">Checkout - $14.00 / month</button>
+      <div class="modal__body">
+        <div class="modal__body__wrapper">
+          <p class="modal__summary">${generateSummaryHTML(summary)}</p>
+          <p class="modal__alert">Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.</p>
+        </div>
+        <button class="btn" id="confirmation">Checkout - $14.00 / month</button>
+      </div>
     </div>
   `;
   document.body.appendChild(modal);
 
-  // apply backdrop shadow filter to body
   const container = document.querySelector(".container");
-  // create a backdrop
   const backdrop = document.createElement("div");
 
   backdrop.classList.add("backdrop");
   container.appendChild(backdrop);
 
-  // close modal on backdrop click
   container.addEventListener("click", function (e) {
     if (e.target.classList.contains("backdrop")) {
       modal.remove();
       backdrop.remove();
+      document.body.style.overflow = "auto";
       container.classList.remove("backdrop");
     }
   });
 
-  //disable scroll if modal is open
-  document.body.style.overflow = "hidden";
-
-  // enable scroll if modal is closed
-  modal.addEventListener("click", function () {
+  const confirmationBtn = document.getElementById("confirmation");
+  confirmationBtn.addEventListener("click", function () {
+    summaryEl.innerHTML = initialSummary;
+    summary.forEach((item) => item.pop());
+    items.forEach((item) => item.classList.remove("selected"));
+    modal.remove();
+    backdrop.remove();
     document.body.style.overflow = "auto";
+    container.classList.remove("backdrop");
   });
 });
