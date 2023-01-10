@@ -2,25 +2,19 @@
 @use "../../abstracts/variables" as *;
 
 .commitment {
-  @extend %flex-column;
-  gap: 48px;
+  @include flex-column($gap: $gap-48);
 
   img {
     border-radius: $border-rounded;
   }
 
   article {
-    @extend %flex-column;
+    @include flex-column($gap: $gap-30);
+    color: $text-grey-700;
     text-align: center;
-    gap: 30px;
-  }
-
-  h2 {
-    color: $color-secondary;
   }
 
   p {
     @extend %text-opacity;
-    color: $color-secondary;
   }
 }

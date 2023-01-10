@@ -21,3 +21,33 @@ $sidebar-gradient: linear-gradient(
   rgba(254, 252, 247, 0.504981) 0%,
   #fefcf7 55.94%
 );
+
+$gap-120: 12rem;
+$gap-110: 11rem;
+$gap-80: 8rem;
+$gap-72: 7.2rem;
+$gap-56: 5.6rem;
+$gap-48: 4.8rem;
+$gap-32: 3.2rem;
+$gap-30: 3rem;
+$gap-24: 2.4rem;
+$gap-22: 2.2rem;
+$gap-16: 1.6rem;
+$gap-8: 0.8rem;
+
+$rounded-sm: 0.8rem;
+$rounded: 1rem;
+
+$text-white: $color-white;
+$text-white-700: $color-quaternary;
+$text-grey: $color-quinary;
+$text-grey-700: $color-secondary;
+$text-orange: $color-tertiary;
+$text-green: $color-primary;
+$text-transparent: transparent;
+$text-uppercase: uppercase;
+$letter-spacing: 0.009rem;
+$font-weight-bold: 700;
+$font-weight-extra-bold: 900;
+
+//_hero.scss fix opacity value

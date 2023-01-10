@@ -1,0 +1,29 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/variables" as *;
+
+.footer {
+  @include flex-column($gap: 4.8rem, $align-items: center);
+  background: $bg-footer;
+  padding: 5.4rem 0;
+  margin-top: 12rem;
+
+  &__nav {
+    ul {
+      @include flex-column($gap: 2.4rem, $align-items: center);
+
+      a {
+        font-weight: 700;
+        color: $color-quinary;
+        text-transform: uppercase;
+        text-decoration: none;
+        letter-spacing: 0.009rem;
+      }
+    }
+  }
+
+  &__social {
+    ul {
+      @include flex-center($gap: 2.4rem);
+    }
+  }
+}

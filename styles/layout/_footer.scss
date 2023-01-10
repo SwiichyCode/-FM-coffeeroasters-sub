@@ -2,33 +2,28 @@
 @use "../abstracts/variables" as *;
 
 .footer {
-  @extend %flex-column;
-  align-items: center;
-  gap: 4.8rem;
+  @include flex-column($gap: $gap-48, $align-items: center);
   background: $bg-footer;
   padding: 5.4rem 0;
   margin-top: 12rem;
 
   &__nav {
     ul {
-      @extend %flex-column;
-      align-items: center;
-      gap: 2.4rem;
+      @include flex-column($gap: $gap-24, $align-items: center);
 
       a {
-        font-weight: 700;
-        color: $color-quinary;
-        text-transform: uppercase;
+        font-weight: $font-weight-bold;
+        color: $text-grey;
+        text-transform: $text-uppercase;
         text-decoration: none;
-        letter-spacing: 0.009rem;
+        letter-spacing: $letter-spacing;
       }
     }
   }
 
   &__social {
     ul {
-      @extend %flex-center;
-      gap: 2.4rem;
+      @include flex-center($gap: $gap-24);
     }
   }
 }

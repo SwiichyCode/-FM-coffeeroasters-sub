@@ -2,21 +2,19 @@
 @use "../../abstracts/variables" as *;
 
 .tutorial {
-  @extend %flex-column;
+  @include flex-column($gap: $gap-56);
   background-image: url("../assets/about/mobile/bg-quality.png");
   background-size: cover;
   border-radius: $border-rounded;
   padding: 8rem 2.4rem;
-  gap: 5.6rem;
 
   article {
-    @extend %flex-column;
-    align-items: center;
+    @include flex-column($gap: $gap-24, $align-items: center);
     text-align: center;
-    gap: 2.4rem;
+    color: $text-white;
 
     h1 {
-      color: $color-tertiary;
+      color: $text-orange;
       font-size: 7.2rem;
       line-height: 7.2rem;
     }
@@ -24,46 +22,8 @@
     h3 {
       line-height: 3.5rem;
     }
-    h3,
-    p {
-      color: $color-white;
-    }
     p {
       @extend %text-opacity;
-    }
-  }
-}
-
-.result {
-  @extend %flex-column;
-  align-items: center;
-  gap: 5.6rem;
-
-  .result__wrapper {
-    @extend %flex-column;
-    background-image: url("../assets/about/mobile/bg-quality.png");
-    background-size: cover;
-    color: $color-white;
-    gap: 0.8rem;
-    padding: 3.2rem 2.5rem;
-    border-radius: $border-rounded;
-
-    &--title {
-      text-transform: uppercase;
-      @extend %text-opacity;
-      opacity: 0.5;
-    }
-
-    p {
-      color: $color-white;
-      font-weight: 900;
-      font-size: 2.4rem;
-      line-height: 4rem;
-      font-family: "Fraunces", serif;
-
-      span {
-        color: $color-primary;
-      }
     }
   }
 }

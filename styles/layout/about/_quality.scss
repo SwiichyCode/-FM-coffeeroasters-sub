@@ -22,11 +22,11 @@
   }
 
   article {
-    @extend %flex-column;
+    @include flex-column($gap: $gap-24);
     text-align: center;
-    color: $color-quaternary;
+    color: $text-white-700;
     padding-top: 14.2rem;
-    gap: 2.4rem;
+
     p {
       @extend %text-opacity;
     }

@@ -2,46 +2,36 @@
 @use "../../abstracts/variables" as *;
 
 .collection {
-  .title-wrapper {
-    @extend %flex-center;
-    min-height: 7.2rem;
+  h1 {
+    line-height: 72px;
+    color: $text-transparent;
     background: $title-gradient;
     background-clip: text;
     text-align: center;
     margin-bottom: 1.3rem;
-
-    h1 {
-      color: transparent;
-    }
   }
 
   &__wrapper {
-    @extend %flex-column;
-    align-items: center;
-    gap: 4.8rem;
+    @include flex-column($gap: $gap-48);
 
-    &--article {
-      @extend %flex-column;
-      align-items: center;
+    article {
+      @include flex-column(2.4rem, center);
       text-align: center;
-      gap: 2.4rem;
 
       img {
         width: 100%;
         max-width: 20rem;
-        object-fit: cover;
       }
 
       div {
-        @extend %flex-column;
-        gap: 1.6rem;
+        @include flex-column($gap: $gap-16, $align-items: center);
 
         h4 {
-          color: $color-secondary;
+          color: $text-grey-700;
         }
 
         p {
-          max-width: 28.2rem;
+          width: clamp(20rem, 100%, 28.2rem);
         }
       }
     }

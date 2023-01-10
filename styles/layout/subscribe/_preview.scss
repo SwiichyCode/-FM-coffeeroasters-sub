@@ -1,0 +1,32 @@
+@use "../../abstracts/placeholders" as *;
+@use "../../abstracts/variables" as *;
+
+.preview {
+  @include flex-column($gap: $gap-8, $align-items: center);
+
+  &__title {
+    text-transform: uppercase;
+    @extend %text-opacity;
+    opacity: 0.5;
+  }
+
+  article {
+    @include flex-column($gap: $gap-8);
+    background-image: url("../assets/about/mobile/bg-quality.png");
+    background-size: cover;
+    color: $text-white;
+    padding: 3.2rem 2.5rem;
+    border-radius: $border-rounded;
+
+    p {
+      font-weight: $font-weight-extra-bold;
+      font-size: 2.4rem;
+      line-height: 4rem;
+      font-family: "Fraunces", serif;
+
+      span {
+        color: $text-green;
+      }
+    }
+  }
+}

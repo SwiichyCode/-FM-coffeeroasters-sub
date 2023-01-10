@@ -4,11 +4,11 @@
 .hero {
   @extend %flex-column;
   min-height: 40rem;
-  color: $text-white-700;
+  color: $color-quaternary;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
-  border-radius: $rounded;
+  border-radius: 1rem;
   padding: 0 2.4rem;
   z-index: 10;
 

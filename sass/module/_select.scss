@@ -2,7 +2,8 @@
 @use "../abstracts/variables" as *;
 
 .select {
-  @include flex-column($gap: $gap-32);
+  @extend %flex-column;
+  gap: 3.2rem;
 
   label {
     @extend %flex-between;
@@ -11,25 +12,26 @@
 
     h4 {
       max-width: 24rem;
-      color: $text-grey;
+      color: $color-quinary;
     }
   }
 
   ul {
-    @include flex-column($gap: $gap-16);
+    @extend %flex-column;
     visibility: visible;
     opacity: 1;
     transition: all 0.3s ease-in-out;
+    gap: 1.6rem;
 
     li {
-      color: $text-grey-700;
+      color: $color-secondary;
       background: $bg-option;
       border-radius: 0.8rem;
       padding: 2.4rem;
       cursor: pointer;
 
       &.selected {
-        color: $text-white;
+        color: $color-white;
         background: $color-primary;
       }
     }

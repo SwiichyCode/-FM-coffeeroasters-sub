@@ -2,33 +2,28 @@
 @use "../../abstracts/variables" as *;
 
 .headquarters {
-  @extend %flex-column;
+  @include flex-column($gap: $gap-72);
   text-align: center;
-  gap: 7.2rem;
 
   h4 {
-    color: $color-quinary;
+    color: $text-grey;
   }
 
   &__wrapper {
-    @extend %flex-column;
-    gap: 8rem;
+    @include flex-column($gap: $gap-80, $align-items: center);
   }
 
   article {
-    @extend %flex-column;
-    align-items: center;
+    @include flex-column($gap: $gap-48, $align-items: center);
     text-align: center;
-    gap: 4.7rem;
 
     img {
       width: min-content;
     }
 
     div {
-      @extend %flex-column;
-      gap: 2.2rem;
-      color: $color-secondary;
+      @include flex-column($gap: $gap-22);
+      color: $text-grey-700;
     }
   }
 }

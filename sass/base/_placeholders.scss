@@ -25,17 +25,8 @@
 }
 
 // Mixin utility classes
-@mixin flex-column($gap: 0, $align-items: initial, $justify-content: initial) {
+@mixin flex-column($gap: 0) {
   display: flex;
   flex-direction: column;
-  align-items: $align-items;
-  justify-content: $justify-content;
-  gap: $gap;
-}
-
-@mixin flex-center($gap: 0) {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   gap: $gap;
 }

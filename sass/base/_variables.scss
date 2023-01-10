@@ -1,0 +1,23 @@
+// Colors
+$color-primary: #0e8784;
+$color-secondary: #333d4b;
+$color-tertiary: #fdd6ba;
+$color-quaternary: #fefcf7;
+$color-quinary: #83888f;
+$color-senary: #a9acb0;
+$color-white: #ffffff;
+$btn-hover: #66d2cf;
+$btn-disabled: #e2dedb;
+$bg-footer: #2c343e;
+$bg-option: #f4f1eb;
+$border-rounded: 10px;
+$title-gradient: linear-gradient(
+  180deg,
+  $color-senary 0%,
+  $color-quaternary 100%
+);
+$sidebar-gradient: linear-gradient(
+  360deg,
+  rgba(254, 252, 247, 0.504981) 0%,
+  #fefcf7 55.94%
+);

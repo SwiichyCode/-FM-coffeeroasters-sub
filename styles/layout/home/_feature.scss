@@ -3,23 +3,20 @@
 
 .feature {
   @extend %flex-column;
-  color: $color-quaternary;
+  color: $text-white-700;
 
   &__header {
-    @extend %flex-column;
+    @include flex-column($gap: $gap-24);
     text-align: center;
     background: $bg-footer;
     border-radius: 1rem 1rem 0 0;
     padding: 6.4rem 2.4rem 2.8rem 2.4rem;
-    gap: 2.4rem;
   }
 
   &__wrapper {
+    @include flex-column($gap: $gap-24, $align-items: center);
     position: relative;
-    @extend %flex-column;
-    align-items: center;
     padding: 3.6rem 2.4rem 0 2.4rem;
-    gap: 2.4rem;
 
     &--bg {
       position: absolute;
@@ -33,22 +30,23 @@
     }
 
     &--article {
+      @include flex-column(
+        $gap: $gap-56,
+        $align-items: center,
+        $justify-content: center
+      );
       width: 100%;
-      @extend %flex-center;
-      @extend %flex-column;
       min-height: 38.2rem;
       background: $color-primary;
-      border-radius: 0.8rem;
+      border-radius: $rounded-sm;
       z-index: 20;
-      gap: 5.6rem;
 
       div {
-        @extend %flex-column;
+        @include flex-column($gap: $gap-24);
         text-align: center;
-        gap: 2.4rem;
 
         p {
-          max-width: 21.2rem;
+          width: clamp(21.2rem, 21.2rem, 28.2rem);
         }
       }
     }

@@ -7,9 +7,9 @@
 }
 
 .main {
-  @include flex-column($gap: $gap-120);
+  @include flex-column($gap: 12rem);
 }
 
 .selection {
-  @include flex-column($gap: $gap-110);
+  @include flex-column($gap: 11rem);
 }
