@@ -1,0 +1,28 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/variables" as *;
+
+.subline {
+  display: none;
+
+  @include tablet {
+    display: flex;
+    align-items: center;
+    margin-bottom: 4.8rem;
+    width: 85%;
+
+    .circle {
+      display: block;
+      width: 3.1rem;
+      height: 3.1rem;
+      border-radius: 50%;
+      background: transparent;
+      border: 2px solid $color-primary;
+    }
+
+    .line {
+      width: 40%;
+      height: 2px;
+      background: $color-tertiary;
+    }
+  }
+}
