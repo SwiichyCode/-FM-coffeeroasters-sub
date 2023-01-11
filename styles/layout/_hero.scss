@@ -18,11 +18,15 @@
   }
 
   &__wrapper {
-    max-width: 398px;
     text-align: center;
 
     @include tablet {
+      max-width: 398px;
       text-align: initial;
+    }
+
+    @include desktop {
+      max-width: 493px;
     }
 
     h1,
@@ -31,9 +35,17 @@
     }
 
     p {
+      max-width: 44.5rem;
       mix-blend-mode: normal;
       opacity: 0.8;
-      margin-bottom: 3.9rem;
+    }
+
+    button {
+      margin-top: 3.9rem;
+
+      @include desktop {
+        margin-top: 5.6rem;
+      }
     }
   }
 }
@@ -41,12 +53,37 @@
 .hero--home {
   min-height: 50rem;
   background-image: url("../assets/home/mobile/image-hero-coffeepress.jpg");
+
+  @include tablet {
+    background-image: url("../assets/home/tablet/image-hero-coffeepress.jpg");
+  }
+
+  @include desktop {
+    min-height: 60rem;
+    background-image: url("../assets/home/desktop/image-hero-coffeepress.jpg");
+  }
 }
 
 .hero--about {
   background-image: url("../assets/about/mobile/image-hero-whitecup.jpg");
+
+  @include tablet {
+    background-image: url("../assets/about/tablet/image-hero-whitecup.jpg");
+  }
+
+  @include desktop {
+    background-image: url("../assets/about/desktop/image-hero-whitecup.jpg");
+  }
 }
 
 .hero--subscribe {
   background-image: url("../assets/plan/mobile/image-hero-blackcup.jpg");
+
+  @include tablet {
+    background-image: url("../assets/plan/tablet/image-hero-blackcup.jpg");
+  }
+
+  @include desktop {
+    background-image: url("../assets/plan/desktop/image-hero-blackcup.jpg");
+  }
 }

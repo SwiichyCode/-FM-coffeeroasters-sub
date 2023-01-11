@@ -1,3 +1,5 @@
+@use "../abstracts/variables" as *;
+
 %flex-center {
   display: flex;
   justify-content: center;
@@ -54,7 +56,13 @@
 }
 
 @mixin tablet {
-  @media (min-width: 768px) {
+  @media (min-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: $breakpoint-desktop) {
     @content;
   }
 }

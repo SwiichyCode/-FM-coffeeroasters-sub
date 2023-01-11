@@ -4,13 +4,16 @@
 .presentation {
   @include flex-column($gap: $gap-80, $align-items: center);
   width: 100%;
-  max-width: 104.5rem;
   text-align: center;
 
   @include tablet {
     align-items: initial;
     text-align: initial;
     gap: initial;
+  }
+
+  @include desktop {
+    padding: 0 8.5rem;
   }
 
   h4 {
@@ -49,12 +52,17 @@
 
   &__wrapper {
     @include flex-column($gap: $gap-56);
+    max-width: 104.5rem;
 
     @include tablet {
       flex-direction: initial;
       justify-content: space-between;
       gap: 10px;
       margin-bottom: 4.4rem;
+    }
+
+    @include desktop {
+      margin-bottom: 6.4rem;
     }
 
     &--article {

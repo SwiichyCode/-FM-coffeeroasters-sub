@@ -8,16 +8,36 @@
   margin-top: 12rem;
 
   @include tablet {
-    gap: 0px;
+    gap: initial;
+  }
 
-    &__logo {
-      padding-bottom: 3.2rem;
+  @include desktop {
+    flex-direction: initial;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4.7rem 8.5rem;
+  }
+
+  .left-side {
+    @include flex-column($gap: 4.8rem, $align-items: center);
+
+    @include tablet {
+      gap: $gap-32;
+    }
+
+    @include desktop {
+      gap: 102px;
+      flex-direction: initial;
     }
   }
 
   &__nav {
     @include tablet {
       padding-bottom: 6.5rem;
+    }
+
+    @include desktop {
+      padding-bottom: 0;
     }
 
     ul {
@@ -39,6 +59,7 @@
   }
 
   &__social {
+    height: 2.4rem;
     ul {
       @include flex-center($gap: $gap-24);
     }

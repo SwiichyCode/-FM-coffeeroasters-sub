@@ -1,24 +1,56 @@
 @use "../../abstracts/placeholders" as *;
 @use "../../abstracts/variables" as *;
 
+// apply different breakpoint for this component
+
 .quality {
   min-height: 50.9rem;
   position: relative;
-  background-image: url("../assets/about/mobile/bg-quality.png");
-  background-size: cover;
+  background: #272e37;
   border-radius: $border-rounded;
   padding: 0 2.4rem;
   margin-top: calc(19.8rem - 12rem);
 
-  img {
+  @include tablet {
+    display: flex;
+    justify-content: center;
+    min-height: 48.8rem;
+  }
+
+  @include desktop {
+    justify-content: flex-start;
+    padding: 8.8rem 8.5rem;
+  }
+
+  &__image {
+    width: 100%;
+    max-width: 27.9rem;
+    min-height: 15.6rem;
     display: block;
     position: absolute;
     top: 0%;
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: $border-rounded;
-    width: 100%;
-    max-width: 27.9rem;
+    background-image: url("../../assets/about/mobile/image-quality.jpg");
+    background-size: cover;
+    background-position: center;
+
+    @include tablet {
+      max-width: 57.3rem;
+      min-height: 32rem;
+      background-image: url("../../assets/about/tablet/image-quality.jpg");
+    }
+
+    @include desktop {
+      max-width: 44.5rem;
+      min-height: 47.4rem;
+      background-image: url("../../assets/about/desktop/image-quality.jpg");
+      transform: initial;
+      left: initial;
+      top: -8.8rem;
+      right: 8.5rem;
+    }
   }
 
   article {
@@ -26,6 +58,22 @@
     text-align: center;
     color: $text-white-700;
     padding-top: 14.2rem;
+
+    @include tablet {
+      max-width: 54rem;
+      padding-top: 22.2rem;
+    }
+
+    @include desktop {
+      width: 100%;
+      max-width: 54rem;
+      padding-top: 0;
+      text-align: left;
+
+      h3 {
+        font-size: 4rem;
+      }
+    }
 
     p {
       @extend %text-opacity;
