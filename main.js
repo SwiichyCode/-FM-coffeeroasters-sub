@@ -33,12 +33,10 @@ labels.forEach((label) => {
 
 //-------------------//
 
-const summary = [[], [], [], [], []];
+let summary = Array(5).fill("__");
 const summaryEl = document.getElementById("summary");
-const summaryItems = document.querySelectorAll(".summary-item");
 const itemsList = document.querySelectorAll(".items-list");
 const items = document.querySelectorAll(".item");
-const selected = document.querySelector(".selected");
 
 const initialSummary = `
   "I drink my coffee as <span class="summary-item">__</span>, with a <span class="summary-item">__</span> type of bean. <span class="summary-item">__</span> ground ala <span class="summary-item">__</span>, sent to me <span class="summary-item">__</span>."`;
@@ -46,51 +44,53 @@ summaryEl.innerHTML = initialSummary;
 
 function generateSummaryHTML(summary) {
   return `
-    "I drink my coffee as <span class="summary-item">${
-      summary[0].length ? summary[0] : "__"
-    }</span>, with a <span class="summary-item">${
-    summary[1].length ? summary[1] : "__"
-  }</span> type of bean. <span class="summary-item">${
-    summary[2].length ? summary[2] : "__"
-  }</span> ground ala <span class="summary-item">${
-    summary[3].length ? summary[3] : "__"
-  }</span>, sent to me <span class="summary-item">${
-    summary[4].length ? summary[4] : "__"
-  }</span>."
+    "I drink my coffee as <span class="summary-item">${summary[0]}</span>, with a <span class="summary-item">${summary[1]}</span> type of bean. <span class="summary-item">${summary[2]}</span> ground ala <span class="summary-item">${summary[3]}</span>, sent to me <span class="summary-item">${summary[4]}</span>."
   `;
 }
 
 items.forEach((item) => {
-  item.addEventListener("click", function () {
-    item.classList.toggle("selected");
-
-    const parentUlIndex = Array.from(itemsList).indexOf(item.parentNode);
-    summary[parentUlIndex].push(item.firstElementChild.textContent);
-    if (summary[parentUlIndex].length > 1) {
-      summary[parentUlIndex].shift();
-    }
-
-    const parentUl = item.parentNode;
-    const ulItems = parentUl.querySelectorAll(".item");
-
-    ulItems.forEach((ulItem) => {
-      ulItem.classList.remove("selected");
-    });
-
-    item.classList.add("selected");
-
-    summaryEl.innerHTML = generateSummaryHTML(summary);
-  });
+  item.addEventListener("click", handleItemClick);
 });
 
+function handleItemClick() {
+  const item = this;
+  const parentUl = item.parentNode;
+  const ulItems = parentUl.querySelectorAll(".item");
+  const parentUlIndex = Array.from(itemsList).indexOf(parentUl);
+  summary[parentUlIndex] = [item.firstElementChild.textContent];
+
+  ulItems.forEach((ulItem) => {
+    ulItem.classList.remove("selected");
+  });
+
+  item.classList.add("selected");
+  summaryEl.innerHTML = generateSummaryHTML(summary);
+}
+
 const submitBtn = document.getElementById("submit");
-submitBtn.addEventListener("click", function (e) {
+submitBtn.addEventListener("click", handleSubmitClick);
+
+function handleSubmitClick(e) {
   e.preventDefault();
-  if (summary.map((item) => item.length).includes(0)) {
+  if (summary.includes("__")) {
     alert("Please select all options");
     return;
   }
 
+  const modal = createModal();
+  document.body.appendChild(modal);
+
+  const container = document.querySelector(".container");
+  const backdrop = createBackdrop();
+  container.appendChild(backdrop);
+
+  container.addEventListener("click", handleBackdropClick);
+
+  const confirmationBtn = document.getElementById("confirmation");
+  confirmationBtn.addEventListener("click", handleConfirmationClick);
+}
+
+function createModal() {
   window.scrollTo(0, 0);
   document.body.style.overflow = "hidden";
 
@@ -110,31 +110,32 @@ submitBtn.addEventListener("click", function (e) {
       </div>
     </div>
   `;
-  document.body.appendChild(modal);
+  return modal;
+}
 
-  const container = document.querySelector(".container");
+function createBackdrop() {
   const backdrop = document.createElement("div");
-
   backdrop.classList.add("backdrop");
-  container.appendChild(backdrop);
+  return backdrop;
+}
 
-  container.addEventListener("click", function (e) {
-    if (e.target.classList.contains("backdrop")) {
-      modal.remove();
-      backdrop.remove();
-      document.body.style.overflow = "auto";
-      container.classList.remove("backdrop");
-    }
-  });
-
-  const confirmationBtn = document.getElementById("confirmation");
-  confirmationBtn.addEventListener("click", function () {
-    summaryEl.innerHTML = initialSummary;
-    summary.forEach((item) => item.pop());
-    items.forEach((item) => item.classList.remove("selected"));
+function handleBackdropClick(e) {
+  if (e.target.classList.contains("backdrop")) {
+    const modal = document.querySelector(".modal");
+    const backdrop = document.querySelector(".backdrop");
     modal.remove();
     backdrop.remove();
     document.body.style.overflow = "auto";
-    container.classList.remove("backdrop");
-  });
-});
+  }
+}
+
+function handleConfirmationClick() {
+  const modal = document.querySelector(".modal");
+  const backdrop = document.querySelector(".backdrop");
+  summaryEl.innerHTML = initialSummary;
+  summary.forEach((item) => item.pop());
+  items.forEach((item) => item.classList.remove("selected"));
+  modal.remove();
+  backdrop.remove();
+  document.body.style.overflow = "auto";
+}
