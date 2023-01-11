@@ -7,9 +7,26 @@
   padding: 5.4rem 0;
   margin-top: 12rem;
 
+  @include tablet {
+    gap: 0px;
+
+    &__logo {
+      padding-bottom: 3.2rem;
+    }
+  }
+
   &__nav {
+    @include tablet {
+      padding-bottom: 6.5rem;
+    }
+
     ul {
       @include flex-column($gap: $gap-24, $align-items: center);
+
+      @include tablet {
+        flex-direction: initial;
+        gap: $gap-32;
+      }
 
       a {
         font-weight: $font-weight-bold;

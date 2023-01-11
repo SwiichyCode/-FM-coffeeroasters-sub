@@ -3,15 +3,20 @@
 
 .collection {
   h1 {
-    line-height: 72px;
+    line-height: 7.2rem;
     color: $text-transparent;
     background: $title-gradient;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-
     text-align: center;
     margin-bottom: 1.3rem;
+
+    @include tablet {
+      line-height: 11.2rem;
+      font-size: 9.6rem;
+      margin-bottom: 1.9rem;
+    }
   }
 
   &__wrapper {
@@ -21,13 +26,32 @@
       @include flex-column(2.4rem, center);
       text-align: center;
 
+      @include tablet {
+        @include flex(
+          $gap: $gap-36,
+          $justify-content: center,
+          $align-items: center
+        );
+        text-align: initial;
+      }
+
       img {
         width: 100%;
         max-width: 20rem;
+
+        @include tablet {
+          max-width: 25.5rem;
+        }
       }
 
       div {
         @include flex-column($gap: $gap-16, $align-items: center);
+        max-width: 282px;
+
+        @include tablet {
+          align-items: initial;
+          gap: $gap-24;
+        }
 
         h4 {
           color: $text-grey-700;

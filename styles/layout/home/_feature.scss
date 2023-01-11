@@ -6,17 +6,34 @@
   color: $text-white-700;
 
   &__header {
-    @include flex-column($gap: $gap-24);
+    @include flex-column($gap: $gap-24, $align-items: center);
     text-align: center;
     background: $bg-footer;
     border-radius: 1rem 1rem 0 0;
     padding: 6.4rem 2.4rem 2.8rem 2.4rem;
+
+    @include tablet {
+      padding: 6.4rem 2.4rem 0 2.4rem;
+    }
+
+    p {
+      max-width: 540px;
+      @extend %text-opacity;
+    }
   }
 
   &__wrapper {
     @include flex-column($gap: $gap-24, $align-items: center);
     position: relative;
     padding: 3.6rem 2.4rem 0 2.4rem;
+
+    @include tablet {
+      padding: 7rem 5.7rem 0 5.8rem;
+
+      img {
+        width: 5.6rem;
+      }
+    }
 
     &--bg {
       position: absolute;
@@ -27,6 +44,12 @@
       background-image: url("../assets/about/mobile/bg-quality.png");
       border-radius: 0 0 1rem 1rem;
       z-index: 10;
+
+      @include tablet {
+        min-height: 380px;
+        background: $bg-footer;
+        background-image: none;
+      }
     }
 
     &--article {
@@ -41,12 +64,26 @@
       border-radius: $rounded-sm;
       z-index: 20;
 
+      @include tablet {
+        flex-direction: initial;
+        min-height: 18rem;
+      }
+
       div {
         @include flex-column($gap: $gap-24);
         text-align: center;
 
+        @include tablet {
+          text-align: initial;
+          gap: $gap-16;
+        }
+
         p {
-          width: clamp(21.2rem, 21.2rem, 28.2rem);
+          max-width: 21.2rem;
+
+          @include tablet {
+            max-width: 34.4rem;
+          }
         }
       }
     }

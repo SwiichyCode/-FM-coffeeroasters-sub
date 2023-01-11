@@ -3,21 +3,83 @@
 
 .presentation {
   @include flex-column($gap: $gap-80, $align-items: center);
+  width: 100%;
+  max-width: 104.5rem;
   text-align: center;
+
+  @include tablet {
+    align-items: initial;
+    text-align: initial;
+    gap: initial;
+  }
 
   h4 {
     color: $text-grey;
+
+    @include tablet {
+      margin-bottom: 4rem;
+    }
+  }
+
+  &__subline {
+    display: none;
+
+    @include tablet {
+      display: flex;
+      align-items: center;
+      margin-bottom: 4.8rem;
+      width: 85%;
+
+      .circle {
+        display: block;
+        width: 3.1rem;
+        height: 3.1rem;
+        border-radius: 50%;
+        background: #fefcf7;
+        border: 2px solid $color-primary;
+      }
+
+      .line {
+        width: 40%;
+        height: 2px;
+        background: $color-tertiary;
+      }
+    }
   }
 
   &__wrapper {
     @include flex-column($gap: $gap-56);
 
+    @include tablet {
+      flex-direction: initial;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 4.4rem;
+    }
+
     &--article {
-      @include flex-column($gap: $gap-24);
+      @include flex-column($gap: $gap-24, $align-items: center);
+
+      @include tablet {
+        align-items: flex-start;
+        width: 100%;
+        min-width: 223px;
+        max-width: 285px;
+        gap: $gap-38;
+      }
 
       h1 {
         color: $text-orange;
+        font-size: 7.2rem;
+        line-height: 7.2rem;
       }
+
+      h3 {
+        @include tablet {
+          max-width: 230px;
+        }
+      }
+
       h3,
       p {
         color: $text-grey-700;

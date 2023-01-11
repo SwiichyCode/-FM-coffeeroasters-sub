@@ -3,6 +3,7 @@
 
 .hero {
   @extend %flex-column;
+  justify-content: center;
   min-height: 40rem;
   color: $text-white-700;
   background-repeat: no-repeat;
@@ -12,9 +13,17 @@
   padding: 0 2.4rem;
   z-index: 10;
 
+  @include tablet {
+    padding: 0 5.8rem;
+  }
+
   &__wrapper {
+    max-width: 398px;
     text-align: center;
-    margin: auto;
+
+    @include tablet {
+      text-align: initial;
+    }
 
     h1,
     h2 {

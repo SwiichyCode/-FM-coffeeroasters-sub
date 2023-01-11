@@ -39,3 +39,22 @@
   align-items: center;
   gap: $gap;
 }
+
+@mixin flex(
+  $gap: 0,
+  $justify-content: initial,
+  $align-items: initial,
+  $flex-direction: initial
+) {
+  display: flex;
+  justify-content: $justify-content;
+  align-items: $align-items;
+  flex-direction: $flex-direction;
+  gap: $gap;
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
