@@ -19,19 +19,19 @@
     width: 100%;
     height: 40rem;
     border-radius: $border-rounded;
-    background-image: url("../../assets/about/mobile/image-commitment.jpg");
+    background-image: url("../../../assets/about/mobile/image-commitment.jpg");
     background-size: cover;
 
     @include tablet {
       height: 47rem;
       max-width: 28.1rem;
-      background-image: url("../../assets/about/tablet/image-commitment.jpg");
+      background-image: url("../../../assets/about/tablet/image-commitment.jpg");
     }
 
     @include desktop {
       height: 52rem;
       max-width: 44.5rem;
-      background-image: url("../../assets/about/desktop/image-commitment.jpg");
+      background-image: url("../../../assets/about/desktop/image-commitment.jpg");
     }
   }
 
