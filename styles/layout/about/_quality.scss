@@ -32,20 +32,20 @@
     left: 50%;
     transform: translate(-50%, -50%);
     border-radius: $border-rounded;
-    background-image: url("../../../assets/about/mobile/image-quality.jpg");
+    background-image: url("../assets/about/mobile/image-quality.jpg");
     background-size: cover;
     background-position: center;
 
     @include tablet {
       max-width: 57.3rem;
       min-height: 32rem;
-      background-image: url("../../../assets/about/tablet/image-quality.jpg");
+      background-image: url("../assets/about/tablet/image-quality.jpg");
     }
 
     @include desktop {
       max-width: 44.5rem;
       min-height: 47.4rem;
-      background-image: url("../../../assets/about/desktop/image-quality.jpg");
+      background-image: url("../assets/about/desktop/image-quality.jpg");
       transform: initial;
       left: initial;
       top: -8.8rem;
