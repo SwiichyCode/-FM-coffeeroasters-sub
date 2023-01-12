@@ -4,6 +4,13 @@
 .select {
   @include flex-column($gap: $gap-32);
 
+  @include tablet {
+    // @include flex-row($gap: $gap-32);
+    width: 100%;
+    max-width: 73rem;
+    gap: 4rem;
+  }
+
   label {
     @extend %flex-between;
     user-select: none;
@@ -12,6 +19,10 @@
     h4 {
       max-width: 24rem;
       color: $text-grey;
+
+      @include tablet {
+        max-width: 100%;
+      }
     }
   }
 
@@ -21,12 +32,24 @@
     opacity: 1;
     transition: all 0.3s ease-in-out;
 
+    @include tablet {
+      flex-direction: initial;
+      gap: 1rem;
+    }
+
     li {
       color: $text-grey-700;
       background: $bg-option;
       border-radius: 0.8rem;
       padding: 2.4rem;
       cursor: pointer;
+      user-select: none;
+
+      @include tablet {
+        @include flex-column($gap: $gap-24);
+        height: 25rem;
+        padding: 3.2rem 2.4rem;
+      }
 
       &.selected {
         color: $text-white;
