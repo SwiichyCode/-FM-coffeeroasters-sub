@@ -96,6 +96,8 @@ function createModal() {
 
   const modal = document.createElement("div");
   modal.classList.add("modal");
+  const windowSize = window.innerWidth;
+
   modal.innerHTML = `
     <div class="modal">
       <div class="modal__header"> 
@@ -106,7 +108,12 @@ function createModal() {
           <p class="modal__summary">${generateSummaryHTML(summary)}</p>
           <p class="modal__alert">Is this correct? You can proceed to checkout or go back to plan selection if something is off. Subscription discount codes can also be redeemed at the checkout.</p>
         </div>
-        <button class="btn" id="confirmation">Checkout - $14.00 / month</button>
+        <div class="modal__footer__wrapper">
+          <span class="modal__price">$14.00 / month</span>
+          <button class="btn modal__confirm" id="confirmation">${
+            windowSize < 768 ? "Checkout - $14.00 / month" : "Checkout"
+          }</button>
+        </div>
       </div>
     </div>
   `;
