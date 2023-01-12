@@ -25,11 +25,3 @@
     gap: 20rem;
   }
 }
-
-.selection {
-  @include flex-column($gap: $gap-110);
-
-  @include tablet {
-    gap: 10rem;
-  }
-}

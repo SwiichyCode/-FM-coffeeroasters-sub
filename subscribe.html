@@ -91,150 +91,165 @@
 
         <!-- Maybe form ? -->
         <form class="selection" id="form">
-          <div class="select">
-            <label class="select__label">
-              <h4>How do you drink your coffee</h4>
-              <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
-            </label>
-
-            <ul class="items-list close">
-              <li class="item">
-                <h4>Capsule</h4>
-                <p>Compatible with Nespresso systems and similar brewers</p>
-              </li>
-              <li class="item">
-                <h4>Filter</h4>
-                <p>
-                  For pour over or drip methods like Aeropress, Chemex, and V60
-                </p>
-              </li>
-              <li class="item">
-                <h4>Espresso</h4>
-                <p>
-                  Dense and finely ground beans for an intense, flavorful
-                  experience
-                </p>
-              </li>
+          <div class="stepper">
+            <ul>
+              <li><a href="#preferences"><span>01</span> Preferences</li></a>
+              <li><a href="#bean-type"><span>02</span> Bean Type</li></a>
+              <li><a href="#quantity"><span>03</span> Quantity</li></a>
+              <li><a href="#grind-option"><span>04</span> Grind Option</li></a>
+              <li><a href="#deliveries"><span>05</span> Deliveries</li></a>
             </ul>
           </div>
+          <div class="selection__list">
+            <div class="select" id="preferences">
+              <label class="select__label">
+                <h4>How do you drink your coffee</h4>
+                <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
+              </label>
 
-          <div class="select">
-            <label class="select__label">
-              <h4>What type of coffee?</h4>
-              <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
-            </label>
+              <ul class="items-list close">
+                <li class="item">
+                  <h4>Capsule</h4>
+                  <p>Compatible with Nespresso systems and similar brewers</p>
+                </li>
+                <li class="item">
+                  <h4>Filter</h4>
+                  <p>
+                    For pour over or drip methods like Aeropress, Chemex, and
+                    V60
+                  </p>
+                </li>
+                <li class="item">
+                  <h4>Espresso</h4>
+                  <p>
+                    Dense and finely ground beans for an intense, flavorful
+                    experience
+                  </p>
+                </li>
+              </ul>
+            </div>
 
-            <ul class="items-list">
-              <li class="item">
-                <h4>Single Origin</h4>
-                <p>
-                  Distinct, high quality coffee from a specific family-owned
-                  farm
-                </p>
-              </li>
-              <li class="item">
-                <h4>Decaf</h4>
-                <p>
-                  Just like regular coffee, except the caffeine has been removed
-                </p>
-              </li>
-              <li class="item">
-                <h4>Blended</h4>
-                <p>
-                  Combination of two or three dark roasted beans of organic
-                  coffees
-                </p>
-              </li>
-            </ul>
+            <div class="select" id="bean-type">
+              <label class="select__label">
+                <h4>What type of coffee?</h4>
+                <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
+              </label>
+
+              <ul class="items-list">
+                <li class="item">
+                  <h4>Single Origin</h4>
+                  <p>
+                    Distinct, high quality coffee from a specific family-owned
+                    farm
+                  </p>
+                </li>
+                <li class="item">
+                  <h4>Decaf</h4>
+                  <p>
+                    Just like regular coffee, except the caffeine has been
+                    removed
+                  </p>
+                </li>
+                <li class="item">
+                  <h4>Blended</h4>
+                  <p>
+                    Combination of two or three dark roasted beans of organic
+                    coffees
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="select" id="quantity">
+              <label class="select__label">
+                <h4>How much would you like?</h4>
+                <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
+              </label>
+
+              <ul class="items-list">
+                <li class="item">
+                  <h4>250g</h4>
+                  <p>
+                    Perfect for the solo drinker. Yields about 12 delicious
+                    cups.
+                  </p>
+                </li>
+                <li class="item">
+                  <h4>500g</h4>
+                  <p>
+                    Perfect option for a couple. Yields about 40 delectable
+                    cups.
+                  </p>
+                </li>
+                <li class="item">
+                  <h4>1000g</h4>
+                  <p>
+                    Perfect for offices and events. Yields about 90 delightful
+                    cups.
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="select" id="grind-option">
+              <label class="select__label">
+                <h4>Want us to grind them?</h4>
+                <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
+              </label>
+
+              <ul class="items-list">
+                <li class="item">
+                  <h4>Wholebean</h4>
+                  <p>Best choice if you cherish the full sensory experience</p>
+                </li>
+                <li class="item">
+                  <h4>Filter</h4>
+                  <p>
+                    For drip or pour-over coffee methods such as V60 or
+                    Aeropress
+                  </p>
+                </li>
+                <li class="item">
+                  <h4>Cafetiére</h4>
+                  <p>
+                    Course ground beans specially suited for french press coffee
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <div class="select" id="deliveries">
+              <label class="select__label">
+                <h4>How often should we deliver?</h4>
+                <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
+              </label>
+
+              <ul class="items-list">
+                <li class="item">
+                  <h4>Every week</h4>
+                  <p>$7.20 per shipment. Includes free first-class shipping.</p>
+                </li>
+                <li class="item">
+                  <h4>Every 2 weeks</h4>
+                  <p>$9.60 per shipment. Includes free priority shipping.</p>
+                </li>
+                <li class="item">
+                  <h4>Every month</h4>
+                  <p>$12.00 per shipment. Includes free priority shipping.</p>
+                </li>
+              </ul>
+            </div>
+            <section class="preview">
+              <article>
+                <span class="preview__title">order summary</span>
+                <p id="summary"></p>
+              </article>
+
+              <button id="submit" type="submit" class="btn">
+                Create my plan!
+              </button>
+            </section>
           </div>
-
-          <div class="select">
-            <label class="select__label">
-              <h4>How much would you like?</h4>
-              <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
-            </label>
-
-            <ul class="items-list">
-              <li class="item">
-                <h4>250g</h4>
-                <p>
-                  Perfect for the solo drinker. Yields about 12 delicious cups.
-                </p>
-              </li>
-              <li class="item">
-                <h4>500g</h4>
-                <p>
-                  Perfect option for a couple. Yields about 40 delectable cups.
-                </p>
-              </li>
-              <li class="item">
-                <h4>1000g</h4>
-                <p>
-                  Perfect for offices and events. Yields about 90 delightful
-                  cups.
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="select">
-            <label class="select__label">
-              <h4>Want us to grind them?</h4>
-              <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
-            </label>
-
-            <ul class="items-list">
-              <li class="item">
-                <h4>Wholebean</h4>
-                <p>Best choice if you cherish the full sensory experience</p>
-              </li>
-              <li class="item">
-                <h4>Filter</h4>
-                <p>
-                  For drip or pour-over coffee methods such as V60 or Aeropress
-                </p>
-              </li>
-              <li class="item">
-                <h4>Cafetiére</h4>
-                <p>
-                  Course ground beans specially suited for french press coffee
-                </p>
-              </li>
-            </ul>
-          </div>
-
-          <div class="select">
-            <label class="select__label">
-              <h4>How often should we deliver?</h4>
-              <img src="assets/plan/desktop/icon-arrow.svg" alt="" />
-            </label>
-
-            <ul class="items-list">
-              <li class="item">
-                <h4>Every week</h4>
-                <p>$7.20 per shipment. Includes free first-class shipping.</p>
-              </li>
-              <li class="item">
-                <h4>Every 2 weeks</h4>
-                <p>$9.60 per shipment. Includes free priority shipping.</p>
-              </li>
-              <li class="item">
-                <h4>Every month</h4>
-                <p>$12.00 per shipment. Includes free priority shipping.</p>
-              </li>
-            </ul>
-          </div>
-
-          <section class="preview">
-            <article>
-              <span class="preview__title">order summary</span>
-              <p id="summary"></p>
-            </article>
-
-            <button id="submit" type="submit" class="btn">
-              Create my plan!
-            </button>
-          </section>
         </form>
       </main>
       <!-- Footer -->

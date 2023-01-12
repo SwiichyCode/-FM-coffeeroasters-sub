@@ -1,0 +1,30 @@
+@use "../../abstracts/placeholders" as *;
+@use "../../abstracts/variables" as *;
+
+.selection {
+  position: relative;
+  display: flex;
+  gap: 12.5rem;
+
+  .stepper {
+    display: none;
+
+    @include desktop {
+      display: flex;
+    }
+  }
+
+  &__list {
+    @include flex-column($gap: $gap-110);
+
+    @include tablet {
+      gap: 10rem;
+    }
+
+    @include desktop {
+      width: 100%;
+      max-width: 73rem;
+      gap: 14rem;
+    }
+  }
+}

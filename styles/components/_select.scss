@@ -44,6 +44,11 @@
       padding: 2.4rem;
       cursor: pointer;
       user-select: none;
+      transition: all 0.2s ease-in-out;
+
+      &:hover {
+        background: $text-orange;
+      }
 
       @include tablet {
         @include flex-column($gap: $gap-24);

@@ -1,0 +1,55 @@
+@use "../abstracts/placeholders" as *;
+@use "../abstracts/variables" as *;
+
+.stepper {
+  top: 6rem;
+  position: sticky;
+  width: 100%;
+  max-width: 27.5rem;
+  height: min-content;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+    gap: 2.4rem;
+  }
+  li {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 2.4rem;
+      font-weight: 900;
+      font-size: 2.4rem;
+      line-height: 3.2rem;
+      color: #acafb2;
+      font-family: "Fraunces", serif;
+
+      padding-bottom: 2.4rem;
+      border-bottom: 1px solid #dfdfdd;
+      cursor: pointer;
+      text-decoration: none;
+
+      &:hover {
+        color: #858a90;
+
+        & > span {
+          color: #b5b7b9;
+        }
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    color: #cccdcd;
+  }
+}
