@@ -29,7 +29,7 @@
     @include flex-column($gap: $gap-16);
     visibility: visible;
     opacity: 1;
-    transition: all 0.3s ease-in-out;
+    @extend %transition;
 
     @include tablet {
       flex-direction: initial;
@@ -46,7 +46,7 @@
 
       &:hover {
         background: $text-orange;
-        transition: 0.2s ease-in-out;
+        @extend %transition;
       }
 
       @include tablet {

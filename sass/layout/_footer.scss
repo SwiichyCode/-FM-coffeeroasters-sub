@@ -57,6 +57,11 @@
         text-transform: $text-uppercase;
         text-decoration: none;
         letter-spacing: $letter-spacing;
+        @extend %transition;
+
+        &:hover {
+          color: $text-white;
+        }
       }
     }
   }
@@ -65,6 +70,15 @@
     height: 2.4rem;
     ul {
       @include flex-center($gap: $gap-24);
+    }
+
+    svg {
+      color: $color-lightCream;
+      @extend %transition;
+
+      &:hover {
+        color: $color-paleOrange;
+      }
     }
   }
 }
