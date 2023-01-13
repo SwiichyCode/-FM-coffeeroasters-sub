@@ -1,5 +1,5 @@
-@use "../abstracts/placeholders" as *;
-@use "../abstracts/variables" as *;
+@use "../base/placeholders" as *;
+@use "../base/variables" as *;
 
 .modal {
   position: fixed;
@@ -10,7 +10,7 @@
   height: 597px;
   transform: translate(-50%, -50%);
   border-radius: $rounded-sm;
-  background: $color-quaternary;
+  background: $bg-lightCream;
   z-index: 1000;
 
   @include tablet {
@@ -18,7 +18,7 @@
   }
 
   &__header {
-    background: $bg-footer;
+    background: $bg-darkBlue-500;
   }
 
   &__title {

@@ -1,5 +1,5 @@
-@use "../../abstracts/placeholders" as *;
-@use "../../abstracts/variables" as *;
+@use "../../base/placeholders" as *;
+@use "../../base/variables" as *;
 
 .feature {
   @extend %flex-column;
@@ -14,7 +14,7 @@
   &__header {
     @include flex-column($gap: $gap-24, $align-items: center);
     text-align: center;
-    background: $bg-footer;
+    background: $bg-darkBlue-500;
     border-radius: 1rem 1rem 0 0;
     padding: 6.4rem 2.4rem 2.8rem 2.4rem;
 
@@ -59,7 +59,7 @@
 
       @include tablet {
         min-height: 380px;
-        background: $bg-footer;
+        background: $bg-darkBlue-500;
         background-image: none;
       }
 
@@ -76,7 +76,7 @@
       );
       width: 100%;
       min-height: 38.2rem;
-      background: $color-primary;
+      background: $bg-green;
       border-radius: $rounded-sm;
       z-index: 20;
 

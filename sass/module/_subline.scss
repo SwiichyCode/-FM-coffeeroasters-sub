@@ -1,5 +1,5 @@
-@use "../abstracts/placeholders" as *;
-@use "../abstracts/variables" as *;
+@use "../base/placeholders" as *;
+@use "../base/variables" as *;
 
 .subline {
   display: none;
@@ -16,13 +16,13 @@
       height: 3.1rem;
       border-radius: 50%;
       background: transparent;
-      border: 2px solid $color-primary;
+      border: 2px solid $text-green;
     }
 
     .line {
       width: 40%;
       height: 2px;
-      background: $color-tertiary;
+      background: $bg-paleOrange;
     }
   }
 }

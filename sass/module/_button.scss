@@ -1,22 +1,22 @@
-@use "../abstracts/placeholders" as *;
-@use "../abstracts/variables" as *;
+@use "../base/placeholders" as *;
+@use "../base/variables" as *;
 
 .btn {
   width: 100%;
   max-width: 21.7rem;
   height: 5.6rem;
   border-radius: 0.6rem;
-  color: $color-quaternary;
-  background-color: $color-primary;
+  background: $bg-green;
   border: none;
   font-weight: 900;
   font-size: 1.8rem;
   line-height: 2.5rem;
+  color: $text-white-700;
   cursor: pointer;
   @extend %transition;
 
   a {
-    color: $color-quaternary;
+    color: $text-white-700;
     text-decoration: none;
   }
 

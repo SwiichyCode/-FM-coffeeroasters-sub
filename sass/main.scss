@@ -1,17 +1,34 @@
 // Base
-@import "base/variables";
-@import "base/reset";
-@import "base/typography";
-@import "base/placeholders";
+@use "base/_placeholders";
+@use "base/_reset";
+@use "base/_typography";
+@use "base/_variables";
 
 // Layout
-@import "layout/container";
-@import "layout/header";
-@import "layout/hero";
-@import "layout/footer";
-@import "layout/sidenav";
+@use "layout/_container";
+@use "layout/_header";
+@use "layout/_hero";
+@use "layout/_footer";
+@use "layout/_sidenav";
+
+// Home - View
+@use "view/home/_collection";
+@use "view/home/_feature";
+@use "view/home/_presentation";
+
+// About - View
+@use "view/about/_commitment";
+@use "view/about/_quality";
+@use "view/about/_headquarters";
+
+// Subscribe - View
+@use "view/subscribe/_tutorial";
+@use "view/subscribe/_preview";
+@use "view/subscribe/_selection";
 
 // Module
-
-@import "module/button";
-@import "module/select";
+@use "module/_button";
+@use "module/_select";
+@use "module/_modal";
+@use "module/_subline";
+@use "module/_stepper";
