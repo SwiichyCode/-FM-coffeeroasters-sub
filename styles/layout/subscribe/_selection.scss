@@ -2,9 +2,12 @@
 @use "../../abstracts/variables" as *;
 
 .selection {
-  position: relative;
-  display: flex;
-  gap: 12.5rem;
+  @include desktop {
+    position: relative;
+    display: flex;
+    gap: 12.5rem;
+    margin: auto;
+  }
 
   .stepper {
     display: none;

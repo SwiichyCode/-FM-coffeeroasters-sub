@@ -37,6 +37,7 @@ let summary = Array(5).fill("__");
 const summaryEl = document.getElementById("summary");
 const itemsList = document.querySelectorAll(".items-list");
 const items = document.querySelectorAll(".item");
+const stepperLinks = document.querySelectorAll(".stepper__link");
 
 const initialSummary = `
   "I drink my coffee as <span class="summary-item">__</span>, with a <span class="summary-item">__</span> type of bean. <span class="summary-item">__</span> ground ala <span class="summary-item">__</span>, sent to me <span class="summary-item">__</span>."`;
@@ -65,6 +66,7 @@ function handleItemClick() {
 
   item.classList.add("selected");
   summaryEl.innerHTML = generateSummaryHTML(summary);
+  activeSelectStep();
 }
 
 const submitBtn = document.getElementById("submit");
@@ -76,6 +78,9 @@ function handleSubmitClick(e) {
     alert("Please select all options");
     return;
   }
+
+  window.scrollTo(0, 0);
+  document.body.style.overflow = "hidden";
 
   const modal = createModal();
   document.body.appendChild(modal);
@@ -91,9 +96,6 @@ function handleSubmitClick(e) {
 }
 
 function createModal() {
-  window.scrollTo(0, 0);
-  document.body.style.overflow = "hidden";
-
   const modal = document.createElement("div");
   modal.classList.add("modal");
   const windowSize = window.innerWidth;
@@ -126,23 +128,46 @@ function createBackdrop() {
   return backdrop;
 }
 
+function handleModalBackdropRemove() {
+  const modal = document.querySelector(".modal");
+  const backdrop = document.querySelector(".backdrop");
+  modal.remove();
+  backdrop.remove();
+  document.body.style.overflow = "auto";
+}
+
 function handleBackdropClick(e) {
   if (e.target.classList.contains("backdrop")) {
-    const modal = document.querySelector(".modal");
-    const backdrop = document.querySelector(".backdrop");
-    modal.remove();
-    backdrop.remove();
-    document.body.style.overflow = "auto";
+    handleModalBackdropRemove();
   }
 }
 
 function handleConfirmationClick() {
-  const modal = document.querySelector(".modal");
-  const backdrop = document.querySelector(".backdrop");
   summaryEl.innerHTML = initialSummary;
   summary.forEach((item) => item.pop());
   items.forEach((item) => item.classList.remove("selected"));
-  modal.remove();
-  backdrop.remove();
-  document.body.style.overflow = "auto";
+  handleModalBackdropRemove();
+  resetStepper();
+}
+
+function activeSelectStep() {
+  const selectedItems = document.querySelectorAll(".selected");
+  const selectedItemsId = Array.from(selectedItems).map(
+    (item) => item.parentNode.parentNode.id
+  );
+
+  stepperLinks.forEach((link) => {
+    const linkId = link.getAttribute("href").slice(1);
+    if (selectedItemsId.includes(linkId)) {
+      link.classList.add("active");
+    } else {
+      link.classList.remove("active");
+    }
+  });
+}
+
+function resetStepper() {
+  stepperLinks.forEach((link) => {
+    link.classList.remove("active");
+  });
 }

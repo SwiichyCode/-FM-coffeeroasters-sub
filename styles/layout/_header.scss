@@ -7,6 +7,12 @@
   margin-bottom: 4rem;
   z-index: 800;
 
+  @include desktop {
+    width: 100%;
+    max-width: 128rem;
+    margin: auto auto 4rem auto;
+  }
+
   &__logo {
     width: 100%;
     max-width: 16.3rem;

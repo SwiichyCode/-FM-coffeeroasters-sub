@@ -66,3 +66,9 @@
     @content;
   }
 }
+
+@mixin desktop-quality {
+  @media (min-width: $breakpoint-quality) {
+    @content;
+  }
+}

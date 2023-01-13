@@ -13,6 +13,9 @@
   }
 
   @include desktop {
+    width: 100%;
+    max-width: 128rem;
+    margin: auto;
     padding: 0 8.5rem;
   }
 

@@ -12,6 +12,9 @@
   }
 
   @include desktop {
+    width: 100%;
+    max-width: 128rem;
+    margin: 12rem auto auto auto;
     flex-direction: initial;
     justify-content: space-between;
     align-items: center;

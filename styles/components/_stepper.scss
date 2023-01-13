@@ -24,11 +24,18 @@
       line-height: 3.2rem;
       color: #acafb2;
       font-family: "Fraunces", serif;
-
       padding-bottom: 2.4rem;
       border-bottom: 1px solid #dfdfdd;
       cursor: pointer;
       text-decoration: none;
+
+      &.active {
+        color: #333d4b;
+
+        & > span {
+          color: #0e8784;
+        }
+      }
 
       &:hover {
         color: #858a90;
@@ -39,7 +46,7 @@
       }
     }
 
-    &:last-child {
+    &:last-child > a {
       border-bottom: none;
     }
   }

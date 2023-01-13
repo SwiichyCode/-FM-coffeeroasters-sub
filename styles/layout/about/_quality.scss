@@ -15,9 +15,13 @@
     display: flex;
     justify-content: center;
     min-height: 48.8rem;
+    margin-top: 16rem;
   }
 
-  @include desktop {
+  @include desktop-quality {
+    width: 100%;
+    max-width: 128rem;
+    margin: auto;
     justify-content: flex-start;
     padding: 8.8rem 8.5rem;
   }
@@ -42,7 +46,7 @@
       background-image: url("../assets/about/tablet/image-quality.jpg");
     }
 
-    @include desktop {
+    @include desktop-quality {
       max-width: 44.5rem;
       min-height: 47.4rem;
       background-image: url("../assets/about/desktop/image-quality.jpg");
@@ -64,7 +68,7 @@
       padding-top: 22.2rem;
     }
 
-    @include desktop {
+    @include desktop-quality {
       width: 100%;
       max-width: 54rem;
       padding-top: 0;

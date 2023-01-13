@@ -5,6 +5,12 @@
   @extend %flex-column;
   color: $text-white-700;
 
+  @include desktop {
+    width: 100%;
+    max-width: 128rem;
+    margin: auto;
+  }
+
   &__header {
     @include flex-column($gap: $gap-24, $align-items: center);
     text-align: center;
