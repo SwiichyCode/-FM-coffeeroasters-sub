@@ -51,10 +51,6 @@
     div {
       @include flex-column($gap: $gap-22);
       color: $text-grey-700;
-
-      // @include tablet {
-      //   flex-direction: initial;
-      // }
     }
   }
 }

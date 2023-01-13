@@ -1,38 +1,3 @@
-const sidenav = document.querySelector(".sidenav");
-const openBtn = document.querySelector(".sidenav-btn");
-const closeBtn = document.getElementById("closeBtn");
-
-openBtn.addEventListener("click", function () {
-  sidenav.classList.toggle("active");
-  openBtn.classList.toggle("close");
-});
-
-document.addEventListener("scroll", function () {
-  if (window.scrollY > 50) {
-    sidenav.classList.remove("active");
-    openBtn.classList.remove("close");
-  }
-});
-
-document.addEventListener("click", function (e) {
-  if (sidenav.classList.contains("active")) {
-    if (!sidenav.contains(e.target) && !openBtn.contains(e.target)) {
-      sidenav.classList.remove("active");
-      openBtn.classList.remove("close");
-    }
-  }
-});
-
-const labels = document.querySelectorAll(".select__label");
-
-labels.forEach((label) => {
-  label.addEventListener("click", function () {
-    this.nextElementSibling.classList.toggle("active");
-  });
-});
-
-//-------------------//
-
 let summary = Array(5).fill("__");
 const summaryEl = document.getElementById("summary");
 const itemsList = document.querySelectorAll(".items-list");
