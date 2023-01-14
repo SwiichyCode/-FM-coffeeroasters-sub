@@ -124,16 +124,16 @@ function activeSelectStep() {
   stepperLinks.forEach((link) => {
     const linkId = link.getAttribute("href").slice(1);
     if (selectedItemsId.includes(linkId)) {
-      link.classList.add("close");
+      link.classList.add("active");
     } else {
-      link.classList.remove("close");
+      link.classList.remove("active");
     }
   });
 }
 
 function resetStepper() {
   stepperLinks.forEach((link) => {
-    link.classList.remove("close");
+    link.classList.remove("active");
   });
 }
 
