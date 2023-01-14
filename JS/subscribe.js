@@ -124,16 +124,16 @@ function activeSelectStep() {
   stepperLinks.forEach((link) => {
     const linkId = link.getAttribute("href").slice(1);
     if (selectedItemsId.includes(linkId)) {
-      link.classList.add("active");
+      link.classList.add("close");
     } else {
-      link.classList.remove("active");
+      link.classList.remove("close");
     }
   });
 }
 
 function resetStepper() {
   stepperLinks.forEach((link) => {
-    link.classList.remove("active");
+    link.classList.remove("close");
   });
 }
 
@@ -141,6 +141,12 @@ const labels = document.querySelectorAll(".select__label");
 
 labels.forEach((label) => {
   label.addEventListener("click", function () {
-    this.nextElementSibling.classList.toggle("active");
+    this.nextElementSibling.classList.toggle("close");
+
+    if (this.nextElementSibling.classList.contains("close")) {
+      this.firstElementChild.classList.add("close");
+    } else {
+      this.firstElementChild.classList.remove("close");
+    }
   });
 });

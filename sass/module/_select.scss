@@ -21,6 +21,15 @@
     cursor: pointer;
     font-family: "Fraunces", serif;
 
+    img {
+      @extend %transition;
+      transform: rotate(180deg);
+
+      &.close {
+        transform: rotate(0deg);
+      }
+    }
+
     @include tablet {
       max-width: 100%;
     }
@@ -72,7 +81,7 @@
       }
     }
 
-    &.active {
+    &.close {
       position: absolute;
       visibility: hidden;
       opacity: 0;
