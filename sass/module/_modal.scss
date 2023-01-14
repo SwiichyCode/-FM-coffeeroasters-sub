@@ -12,6 +12,7 @@
   border-radius: $rounded-sm;
   background: $bg-lightCream;
   z-index: 1000;
+  border-radius: 1.1rem;
 
   @include tablet {
     max-width: 54rem;
@@ -19,6 +20,7 @@
 
   &__header {
     background: $bg-darkBlue-500;
+    border-radius: 0.9rem 0.9rem 0 0;
   }
 
   &__title {
@@ -62,6 +64,10 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+
+    @include tablet {
+      margin-top: 2.4rem;
+    }
 
     span {
       font-family: "Fraunces", serif;

@@ -5,7 +5,7 @@
   @include flex-column($gap: $gap-32);
 
   @include tablet {
-    // width: 100%;
+    width: 100%;
     max-width: 73rem;
     gap: 4rem;
   }
