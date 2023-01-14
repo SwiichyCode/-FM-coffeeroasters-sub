@@ -5,8 +5,8 @@
   @include desktop {
     position: relative;
     display: flex;
+    justify-content: center;
     gap: 12.5rem;
-    margin: auto;
   }
 
   .stepper {
