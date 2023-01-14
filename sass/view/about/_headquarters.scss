@@ -11,8 +11,10 @@
     margin: auto;
   }
 
-  h4 {
+  h2 {
     color: $text-grey;
+    font-size: 2.4rem;
+    line-height: 3.2rem;
 
     @include tablet {
       text-align: left;

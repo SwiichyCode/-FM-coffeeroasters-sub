@@ -12,16 +12,17 @@
 
   label {
     @extend %flex-between;
+    max-width: 24rem;
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 4.8rem;
+    color: $text-grey;
     user-select: none;
     cursor: pointer;
+    font-family: "Fraunces", serif;
 
-    h4 {
-      max-width: 24rem;
-      color: $text-grey;
-
-      @include tablet {
-        max-width: 100%;
-      }
+    @include tablet {
+      max-width: 100%;
     }
   }
 
@@ -43,6 +44,11 @@
       padding: 2.4rem;
       cursor: pointer;
       user-select: none;
+
+      h2 {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+      }
 
       &:hover {
         background: $text-orange;

@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>Coffee roasters</title>
   </head>
   <body>
     <div class="container">
@@ -25,7 +25,7 @@
             loading="lazy"
           />
         </a>
-        <button class="sidenav-btn"></button>
+        <button class="sidenav-btn" aria-label="menu-mobile"></button>
         <nav class="sidenav">
           <ul class="sidenav__ul">
             <li><a href="/">Home</a></li>
@@ -46,15 +46,20 @@
               directly to your door, at your schedule.
             </p>
 
-            <button class="btn">
-              <a href="subscribe.html">Create your plan</a>
+            <button
+              class="btn"
+              onclick="location.href=`subscribe.html`"
+              tyoe="button"
+              role="link"
+            >
+              Create your plan
             </button>
           </div>
         </section>
 
         <!-- Collection -->
         <section class="collection">
-          <h1 class="collection__title">our collection</h1>
+          <h2 class="collection__title">our collection</h2>
 
           <div class="collection__wrapper">
             <article class="collection__wrapper--article">
@@ -64,7 +69,7 @@
                 loading="lazy"
               />
               <div>
-                <h4>Gran Espresso</h4>
+                <h3>Gran Espresso</h3>
                 <p>
                   Light and flavorful blend with cocoa and black pepper for an
                   intense experience
@@ -78,7 +83,7 @@
                 loading="lazy"
               />
               <div>
-                <h4>Planalto</h4>
+                <h3>Planalto</h3>
                 <p>
                   Brazilian dark roast with rich and velvety body, and hints of
                   fruits and nuts
@@ -92,7 +97,7 @@
                 loading="lazy"
               />
               <div>
-                <h4>Piccollo</h4>
+                <h3>Piccollo</h3>
                 <p>
                   Mild and smooth blend featuring notes of toasted almond and
                   dried cherry
@@ -106,7 +111,7 @@
                 loading="lazy"
               />
               <div>
-                <h4>Danche</h4>
+                <h3>Danche</h3>
                 <p>
                   Ethiopian hand-harvested blend densely packed with vibrant
                   fruit notes
@@ -136,7 +141,7 @@
                 loading="lazy"
               />
               <div>
-                <h4>Best quality</h4>
+                <h3>Best quality</h3>
                 <p>
                   Discover an endless variety of the world’s best artisan coffee
                   from each of our roasters.
@@ -150,7 +155,7 @@
                 loading="lazy"
               />
               <div>
-                <h4>Exclusive benefits</h4>
+                <h3>Exclusive benefits</h3>
                 <p>
                   Special offers and swag when you subscribe, including 30% off
                   your first shipment.
@@ -164,7 +169,7 @@
                 loading="lazy"
               />
               <div>
-                <h4>Free shipping</h4>
+                <h3>Free shipping</h3>
                 <p>
                   We cover the cost and coffee is delivered fast. Peak
                   freshness: guaranteed.
@@ -176,7 +181,7 @@
 
         <!-- Tutorial -->
         <section class="presentation">
-          <h4 class="presentation__title">How it works</h4>
+          <h2 class="presentation__title">How it works</h2>
 
           <div class="subline">
             <span class="circle"></span><span class="line"></span
@@ -188,7 +193,7 @@
             <article class="presentation__wrapper--article">
               <h1>01</h1>
 
-              <h3>Pick your coffee</h3>
+              <h2>Pick your coffee</h2>
               <p>
                 Select from our evolving range of artisan coffees. Our beans are
                 ethically sourced and we pay fair prices for them. There are new
@@ -198,7 +203,7 @@
             <article class="presentation__wrapper--article">
               <h1>02</h1>
 
-              <h3>Choose the frequency</h3>
+              <h2>Choose the frequency</h2>
               <p>
                 Customize your order frequency, quantity, even your roast style
                 and grind type. Pause, skip or cancel your subscription with no
@@ -208,7 +213,7 @@
             <article class="presentation__wrapper--article">
               <h1>03</h1>
 
-              <h3>Receive and enjoy!</h3>
+              <h2>Receive and enjoy!</h2>
               <p>
                 We ship your package within 48 hours, freshly roasted. Sit back
                 and enjoy award-winning world-class coffees curated to provide a
@@ -216,8 +221,13 @@
               </p>
             </article>
           </div>
-          <button class="btn createPlan">
-            <a href="subscribe.html">Create your plan</a>
+          <button
+            class="btn"
+            onclick="location.href=`subscribe.html`"
+            tyoe="button"
+            role="link"
+          >
+            Create your plan
           </button>
         </section>
       </main>
@@ -244,7 +254,7 @@
         <nav class="footer__social">
           <ul>
             <li>
-              <a href=""
+              <a href="https://fr-fr.facebook.com/" target="_blank"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                   <path
                     fill="currentColor"
@@ -253,7 +263,7 @@
               ></a>
             </li>
             <li>
-              <a href=""
+              <a href="https://twitter.com/SwiichyCode_" target="_blank"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="20">
                   <path
                     fill="currentColor"
@@ -262,7 +272,7 @@
               ></a>
             </li>
             <li>
-              <a href=""
+              <a href="https://www.instagram.com/?hl=fr" target="_blank"
                 ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
                   <path
                     fill="currentColor"

@@ -5,7 +5,7 @@
   position: relative;
   margin: auto;
 
-  h1 {
+  h2 {
     line-height: 7.2rem;
     color: $text-transparent;
     background: $title-gradient;
@@ -33,6 +33,11 @@
     }
   }
 
+  h3 {
+    font-size: 2.4rem;
+    line-height: 3.2rem;
+  }
+
   &__wrapper {
     @include flex-column($gap: $gap-48);
 
@@ -43,7 +48,7 @@
       z-index: 10;
     }
 
-    article {
+    &--article {
       @include flex-column(2.4rem, center);
       text-align: center;
 

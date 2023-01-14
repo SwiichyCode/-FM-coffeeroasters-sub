@@ -136,3 +136,11 @@ function resetStepper() {
     link.classList.remove("active");
   });
 }
+
+const labels = document.querySelectorAll(".select__label");
+
+labels.forEach((label) => {
+  label.addEventListener("click", function () {
+    this.nextElementSibling.classList.toggle("active");
+  });
+});

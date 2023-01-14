@@ -71,6 +71,11 @@
 }
 
 .hero--about {
+  h1 {
+    font-size: 4rem;
+    line-height: 4.8rem;
+  }
+
   background-image: url("../assets/about/mobile/image-hero-whitecup.jpg");
 
   @include tablet {
