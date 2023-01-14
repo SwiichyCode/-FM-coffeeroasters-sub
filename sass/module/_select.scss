@@ -5,21 +5,27 @@
   @include flex-column($gap: $gap-32);
 
   @include tablet {
-    width: 100%;
+    // width: 100%;
     max-width: 73rem;
     gap: 4rem;
   }
 
   label {
     @extend %flex-between;
-    max-width: 24rem;
+
     font-weight: 900;
-    font-size: 4rem;
-    line-height: 4.8rem;
+    font-size: 2.4rem;
+    line-height: 2.8rem;
     color: $text-grey;
     user-select: none;
     cursor: pointer;
     font-family: "Fraunces", serif;
+
+    @include tablet {
+      max-width: 24rem;
+      font-size: 3.2rem;
+      line-height: 4.8rem;
+    }
 
     img {
       @extend %transition;
@@ -44,6 +50,10 @@
     @include tablet {
       flex-direction: initial;
       gap: 1rem;
+    }
+
+    @include desktop {
+      gap: 2.3rem;
     }
 
     li {

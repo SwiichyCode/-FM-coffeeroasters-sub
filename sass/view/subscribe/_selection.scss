@@ -21,6 +21,8 @@
     @include flex-column($gap: $gap-110);
 
     @include tablet {
+      align-items: center;
+      justify-content: center;
       gap: 10rem;
     }
 

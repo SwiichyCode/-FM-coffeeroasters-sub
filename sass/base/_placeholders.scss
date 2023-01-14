@@ -55,6 +55,8 @@
   gap: $gap;
 }
 
+// Responsive mixins
+
 @mixin tablet {
   @media (min-width: $breakpoint-tablet) {
     @content;
@@ -69,6 +71,18 @@
 
 @mixin desktop-quality {
   @media (min-width: $breakpoint-quality) {
+    @content;
+  }
+}
+
+@mixin tablet-feature {
+  @media (min-width: 650px) {
+    @content;
+  }
+}
+
+@mixin desktop-feature {
+  @media (min-width: 900px) {
     @content;
   }
 }

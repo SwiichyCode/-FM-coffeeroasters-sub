@@ -10,7 +10,7 @@
     line-height: 3.2rem;
   }
 
-  @include desktop {
+  @include desktop-feature {
     width: 100%;
     max-width: 128rem;
     margin: auto;
@@ -23,7 +23,7 @@
     border-radius: 1rem 1rem 0 0;
     padding: 6.4rem 2.4rem 2.8rem 2.4rem;
 
-    @include tablet {
+    @include tablet-feature {
       padding: 6.4rem 2.4rem 0 2.4rem;
     }
 
@@ -38,7 +38,7 @@
     position: relative;
     padding: 3.6rem 2.4rem 0 2.4rem;
 
-    @include tablet {
+    @include tablet-feature {
       padding: 7rem 5.7rem 0 5.8rem;
 
       img {
@@ -46,7 +46,7 @@
       }
     }
 
-    @include desktop {
+    @include desktop-feature {
       flex-direction: initial;
       justify-content: center;
       gap: $gap-30;
@@ -62,7 +62,7 @@
       border-radius: 0 0 1rem 1rem;
       z-index: 10;
 
-      @include tablet {
+      @include tablet-feature {
         min-height: 380px;
         background: $bg-darkBlue-500;
         background-image: none;
@@ -85,14 +85,14 @@
       border-radius: $rounded-sm;
       z-index: 20;
 
-      @include tablet {
+      @include tablet-feature {
         flex-direction: initial;
         justify-content: space-between;
         padding: 0 4.8rem;
         min-height: 18rem;
       }
 
-      @include desktop {
+      @include desktop-feature {
         @include flex-column(
           $gap: $gap-56,
           $align-items: center,
@@ -100,7 +100,7 @@
         );
         max-width: 350px;
         min-height: 38.2rem;
-        padding: 0;
+        padding: 0.8rem;
       }
 
       div {
@@ -108,13 +108,13 @@
         text-align: center;
         max-width: 80%;
 
-        @include tablet {
+        @include tablet-feature {
           text-align: initial;
           gap: $gap-16;
           max-width: 34.4rem;
         }
 
-        @include desktop {
+        @include desktop-feature {
           text-align: center;
           max-width: 25.5rem;
         }
