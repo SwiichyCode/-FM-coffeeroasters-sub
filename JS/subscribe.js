@@ -16,6 +16,7 @@ function generateSummaryHTML(summary) {
 
 items.forEach((item) => {
   item.addEventListener("click", handleItemClick);
+  item.addEventListener("keyup", handleItemEnter);
 });
 
 function handleItemClick() {
@@ -32,6 +33,12 @@ function handleItemClick() {
   item.classList.add("selected");
   summaryEl.innerHTML = generateSummaryHTML(summary);
   activeSelectStep();
+}
+
+function handleItemEnter(e) {
+  if (e.keyCode === 13) {
+    handleItemClick.call(this);
+  }
 }
 
 const submitBtn = document.getElementById("submit");
@@ -64,9 +71,10 @@ function createModal() {
   const modal = document.createElement("div");
   modal.classList.add("modal");
   const windowSize = window.innerWidth;
+  let btnValue = windowSize < 768 ? "Checkout - $14.00 / month" : "Checkout";
 
   modal.innerHTML = `
-    <div class="modal">
+    <form class="modal" method="post">
       <div class="modal__header"> 
         <h3 class="modal__title">Order Summary</h3>
       </div>
@@ -77,12 +85,10 @@ function createModal() {
         </div>
         <div class="modal__footer__wrapper">
           <span class="modal__price">$14.00 / month</span>
-          <button class="btn modal__confirm" id="confirmation">${
-            windowSize < 768 ? "Checkout - $14.00 / month" : "Checkout"
-          }</button>
+          <input type="button" value="${btnValue}" class="btn modal__confirm" id="confirmation">
         </div>
       </div>
-    </div>
+    </form>
   `;
   return modal;
 }
@@ -137,16 +143,26 @@ function resetStepper() {
   });
 }
 
+// Select event listeners
 const labels = document.querySelectorAll(".select__label");
 
 labels.forEach((label) => {
-  label.addEventListener("click", function () {
-    this.nextElementSibling.classList.toggle("close");
-
-    if (this.nextElementSibling.classList.contains("close")) {
-      this.firstElementChild.classList.add("close");
-    } else {
-      this.firstElementChild.classList.remove("close");
-    }
-  });
+  label.addEventListener("click", handleSelectClick);
+  label.addEventListener("keyup", handleSelectEnter);
 });
+
+function handleSelectClick(e) {
+  this.nextElementSibling.classList.toggle("close");
+
+  if (this.nextElementSibling.classList.contains("close")) {
+    this.firstElementChild.classList.add("close");
+  } else {
+    this.firstElementChild.classList.remove("close");
+  }
+}
+
+function handleSelectEnter(e) {
+  if (e.keyCode === 13) {
+    handleSelectClick.call(this);
+  }
+}
