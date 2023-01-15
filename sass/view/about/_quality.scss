@@ -2,16 +2,15 @@
 @use "../../base/variables" as *;
 
 .quality {
-  min-height: 50.9rem;
+  min-height: min-content;
   position: relative;
   background: #272e37;
   border-radius: $border-rounded;
-  padding: 0 2.4rem;
+  padding: 0 2.4rem 6.1rem 2.4rem;
   margin-top: calc(19.8rem - 12rem);
 
   @include tablet {
-    display: flex;
-    justify-content: center;
+    @include flex($justify-content: center);
     min-height: 48.8rem;
     margin-top: 16rem;
   }
@@ -55,7 +54,7 @@
     }
   }
 
-  article {
+  &__article {
     @include flex-column($gap: $gap-24);
     text-align: center;
     color: $text-white-700;
@@ -71,10 +70,6 @@
       max-width: 54rem;
       padding-top: 0;
       text-align: left;
-
-      h3 {
-        font-size: 4rem;
-      }
     }
 
     p {

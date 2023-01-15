@@ -48,8 +48,7 @@
     @extend %transition;
 
     @include tablet {
-      flex-direction: initial;
-      gap: 1rem;
+      @include flex-row($gap: 1rem);
     }
 
     @include desktop {

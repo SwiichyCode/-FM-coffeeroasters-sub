@@ -22,13 +22,14 @@
 @use "view/about/_headquarters";
 
 // Subscribe - View
-@use "view/subscribe/_tutorial";
 @use "view/subscribe/_preview";
 @use "view/subscribe/_selection";
 
 // Module
 @use "module/_button";
+@use "module/_sidenavBtn";
 @use "module/_select";
 @use "module/_modal";
 @use "module/_subline";
 @use "module/_stepper";
+@use "module/_tutorial";

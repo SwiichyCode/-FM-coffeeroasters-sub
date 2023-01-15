@@ -34,24 +34,23 @@
     @include desktop {
       max-width: 493px;
     }
+  }
 
-    h1,
-    h2 {
-      margin-bottom: 2.4rem;
-    }
+  &__title {
+    margin-bottom: 2.4rem;
+  }
 
-    p {
-      max-width: 44.5rem;
-      mix-blend-mode: normal;
-      opacity: 0.8;
-    }
+  &__subtitle {
+    max-width: 44.5rem;
+    mix-blend-mode: normal;
+    opacity: 0.8;
+  }
 
-    button {
-      margin-top: 3.9rem;
+  &__link {
+    margin-top: 3.9rem;
 
-      @include desktop {
-        margin-top: 5.6rem;
-      }
+    @include desktop {
+      margin-top: 5.6rem;
     }
   }
 }

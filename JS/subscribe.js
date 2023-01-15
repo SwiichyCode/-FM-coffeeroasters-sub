@@ -3,7 +3,6 @@ const summaryEl = document.getElementById("summary");
 const itemsList = document.querySelectorAll(".items-list");
 const items = document.querySelectorAll(".item");
 const stepperLinks = document.querySelectorAll(".stepper__link");
-
 const initialSummary = `
   "I drink my coffee as <span class="summary-item">__</span>, with a <span class="summary-item">__</span> type of bean. <span class="summary-item">__</span> ground ala <span class="summary-item">__</span>, sent to me <span class="summary-item">__</span>."`;
 summaryEl.innerHTML = initialSummary;
@@ -18,6 +17,9 @@ items.forEach((item) => {
   item.addEventListener("click", handleItemClick);
   item.addEventListener("keyup", handleItemEnter);
 });
+
+const submitBtn = document.getElementById("submit");
+submitBtn.addEventListener("click", handleSubmitClick);
 
 function handleItemClick() {
   const item = this;
@@ -41,11 +43,9 @@ function handleItemEnter(e) {
   }
 }
 
-const submitBtn = document.getElementById("submit");
-submitBtn.addEventListener("click", handleSubmitClick);
-
 function handleSubmitClick(e) {
   e.preventDefault();
+
   if (summary.includes("__")) {
     alert("Please select all options");
     return;

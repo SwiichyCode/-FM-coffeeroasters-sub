@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Discover the rich and bold taste of our premium coffee beans. Shop our wide selection of blends and single origin coffees at our online coffee store. Freshly roasted and delivered straight to your door."
+    />
     <link rel="icon" type="image/svg+xml" href="vite.svg" />
     <link rel="stylesheet" href="sass/main.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,7 +19,7 @@
       crossorigin="anonymous"
     ></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee roasters</title>
+    <title>Coffee roasters - Subscribe</title>
   </head>
   <body>
     <div class="container">
@@ -31,10 +35,14 @@
         </a>
         <button class="sidenav-btn"></button>
         <nav class="sidenav">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="subscribe.html">Create Your Plan</a></li>
+          <ul class="sidenav__list">
+            <li><a class="sidenav__link" href="/">Home</a></li>
+            <li><a class="sidenav__link" href="about.html">About Us</a></li>
+            <li>
+              <a class="sidenav__link" href="subscribe.html"
+                >Create Your Plan</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
@@ -44,8 +52,8 @@
         <!-- Hero -->
         <section class="hero hero--subscribe">
           <div class="hero__wrapper">
-            <h1>Create a plan</h1>
-            <p>
+            <h1 class="hero__title">Create a plan</h1>
+            <p class="hero__subtitle">
               Build a subscription plan that best fits your needs. We offer an
               assortment of the best artisan coffees from around the globe
               delivered fresh to your door.
@@ -60,10 +68,10 @@
             ><span class="circle"></span>
           </div>
 
-          <div class="tutorial__wrapper">
-            <article>
-              <h2>01</h2>
-              <h3>Pick your coffee</h3>
+          <div class="tutorial__container tutorial__white">
+            <article class="tutorial__article">
+              <h1>01</h1>
+              <h2>Pick your coffee</h2>
               <p>
                 Select from our evolving range of artisan coffees. Our beans are
                 ethically sourced and we pay fair prices for them. There are new
@@ -71,9 +79,9 @@
               </p>
             </article>
 
-            <article>
-              <h2>02</h2>
-              <h3>Choose the frequency</h3>
+            <article class="tutorial__article">
+              <h1>02</h1>
+              <h2>Choose the frequency</h2>
               <p>
                 Customize your order frequency, quantity, even your roast style
                 and grind type. Pause, skip or cancel your subscription with no
@@ -81,9 +89,9 @@
               </p>
             </article>
 
-            <article>
-              <h2>03</h2>
-              <h3>Receive and enjoy !</h3>
+            <article class="tutorial__article">
+              <h1>03</h1>
+              <h2>Receive and enjoy !</h2>
               <p>
                 We ship your package within 48 hours, freshly roasted. Sit back
                 and enjoy award-winning world-class coffees curated to provide a

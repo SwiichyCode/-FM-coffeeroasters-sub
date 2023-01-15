@@ -3,25 +3,25 @@
 
 .container {
   background: $bg-lightCream;
-  padding: 3.2rem 2.4rem 7.2rem 2.4rem;
+  padding: $padding-container-mobile;
 
   @include tablet {
-    padding: 4rem 3.9rem 7.2rem 4rem;
+    padding: $padding-container-tablet;
   }
 
   @include desktop {
-    padding: 4.35rem 8rem 7.2rem 8rem;
+    padding: $padding-container-desktop;
   }
 }
 
 .main {
-  @include flex-column($gap: $gap-120);
+  @include flex-column($gap: $gap-main-mobile);
 
   @include tablet {
-    gap: 14.4rem;
+    gap: $gap-main-tablet;
   }
 
   @include desktop {
-    gap: 20rem;
+    gap: $gap-main-desktop;
   }
 }

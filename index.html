@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Discover the rich and bold taste of our premium coffee beans. Shop our wide selection of blends and single origin coffees at our online coffee store. Freshly roasted and delivered straight to your door."
+    />
     <link rel="icon" type="image/svg+xml" href="vite.svg" />
     <link rel="stylesheet" href="sass/main.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,10 +31,14 @@
         </a>
         <button class="sidenav-btn" aria-label="menu-mobile"></button>
         <nav class="sidenav">
-          <ul class="sidenav__ul">
-            <li><a href="/">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="subscribe.html">Create Your Plan</a></li>
+          <ul class="sidenav__list">
+            <li><a class="sidenav__link" href="/">Home</a></li>
+            <li><a class="sidenav__link" href="about.html">About Us</a></li>
+            <li>
+              <a class="sidenav__link" href="subscribe.html"
+                >Create Your Plan</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
@@ -47,7 +55,7 @@
             </p>
 
             <button
-              class="btn"
+              class="btn hero__link"
               onclick="location.href=`subscribe.html`"
               role="link"
             >
@@ -60,14 +68,15 @@
         <section class="collection">
           <h2 class="collection__title">our collection</h2>
 
-          <div class="collection__wrapper">
-            <article class="collection__wrapper--article">
+          <div class="collection__container">
+            <article class="collection__article">
               <img
                 src="assets/home/desktop/image-gran-espresso.png"
                 alt="gran-espresso"
                 loading="lazy"
+                class="collection__article--picture"
               />
-              <div>
+              <div class="collection__article--wrapper">
                 <h3>Gran Espresso</h3>
                 <p>
                   Light and flavorful blend with cocoa and black pepper for an
@@ -75,13 +84,14 @@
                 </p>
               </div>
             </article>
-            <article class="collection__wrapper--article">
+            <article class="collection__article">
               <img
                 src="assets/home/desktop/image-planalto.png"
                 alt="planalto"
                 loading="lazy"
+                class="collection__article--picture"
               />
-              <div>
+              <div class="collection__article--wrapper">
                 <h3>Planalto</h3>
                 <p>
                   Brazilian dark roast with rich and velvety body, and hints of
@@ -89,13 +99,14 @@
                 </p>
               </div>
             </article>
-            <article class="collection__wrapper--article">
+            <article class="collection__article">
               <img
                 src="assets/home/desktop/image-piccollo.png"
                 alt="piccollo"
                 loading="lazy"
+                class="collection__article--picture"
               />
-              <div>
+              <div class="collection__article--wrapper">
                 <h3>Piccollo</h3>
                 <p>
                   Mild and smooth blend featuring notes of toasted almond and
@@ -103,13 +114,14 @@
                 </p>
               </div>
             </article>
-            <article class="collection__wrapper--article">
+            <article class="collection__article">
               <img
                 src="assets/home/desktop/image-danche.png"
                 alt="danche"
                 loading="lazy"
+                class="collection__article--picture"
               />
-              <div>
+              <div class="collection__article--wrapper">
                 <h3>Danche</h3>
                 <p>
                   Ethiopian hand-harvested blend densely packed with vibrant
@@ -123,24 +135,25 @@
         <!-- Feature -->
         <section class="feature">
           <header class="feature__header">
-            <h2>Why choose us?</h2>
-            <p>
+            <h2 class="feature__header--title">Why choose us?</h2>
+            <p class="feature__header--text">
               A large part of our role is choosing which particular coffees will
               be featured in our range. This means working closely with the best
               coffee growers to give you a more impactful experience on every
               level.
             </p>
           </header>
-          <div class="feature__wrapper">
-            <div class="feature__wrapper--bg"></div>
-            <article class="feature__wrapper--article">
+          <div class="feature__container">
+            <div class="feature__patern"></div>
+            <article class="feature__card">
               <img
                 src="assets/home/desktop/icon-coffee-bean.svg"
                 loading="lazy"
                 alt=""
+                class="feature__card--icon"
               />
 
-              <div>
+              <div class="feature__card--wrapper">
                 <h3>Best quality</h3>
                 <p>
                   Discover an endless variety of the world’s best artisan coffee
@@ -148,13 +161,14 @@
                 </p>
               </div>
             </article>
-            <article class="feature__wrapper--article">
+            <article class="feature__card">
               <img
                 src="assets/home/desktop/icon-gift.svg"
                 alt=""
                 loading="lazy"
+                class="feature__card--icon"
               />
-              <div>
+              <div class="feature__card--wrapper">
                 <h3>Exclusive benefits</h3>
                 <p>
                   Special offers and swag when you subscribe, including 30% off
@@ -162,13 +176,14 @@
                 </p>
               </div>
             </article>
-            <article class="feature__wrapper--article">
+            <article class="feature__card">
               <img
                 src="assets/home/desktop/icon-truck.svg"
                 alt=""
                 loading="lazy"
+                class="feature__card--icon"
               />
-              <div>
+              <div class="feature__card--wrapper">
                 <h3>Free shipping</h3>
                 <p>
                   We cover the cost and coffee is delivered fast. Peak
@@ -189,8 +204,8 @@
             ><span class="circle"></span>
           </div>
 
-          <div class="presentation__wrapper">
-            <article class="presentation__wrapper--article">
+          <div class="tutorial__container tutorial__grey">
+            <article class="tutorial__article">
               <h1>01</h1>
 
               <h2>Pick your coffee</h2>
@@ -200,7 +215,7 @@
                 coffees in all profiles every month for you to try out.
               </p>
             </article>
-            <article class="presentation__wrapper--article">
+            <article class="tutorial__article">
               <h1>02</h1>
 
               <h2>Choose the frequency</h2>
@@ -210,7 +225,7 @@
                 commitment through our online portal.
               </p>
             </article>
-            <article class="presentation__wrapper--article">
+            <article class="tutorial__article">
               <h1>03</h1>
 
               <h2>Receive and enjoy!</h2>
@@ -222,7 +237,7 @@
             </article>
           </div>
           <button
-            class="btn"
+            class="btn presentation__link"
             onclick="location.href=`subscribe.html`"
             role="link"
           >

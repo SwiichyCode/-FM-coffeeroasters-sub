@@ -17,17 +17,17 @@
     height: auto;
   }
 
-  & ul {
+  &__list {
     @include flex($gap: $gap-32, $align-items: center, $flex-direction: column);
     padding-top: 2rem;
 
     @include tablet {
-      flex-direction: initial;
+      @include flex-row($gap: $gap-32);
       padding-top: 0;
     }
   }
 
-  & a {
+  &__link {
     font-weight: $font-weight-extra-bold;
     font-size: 2.4rem;
     line-height: 3.2rem;
@@ -50,28 +50,4 @@
       font-family: "Barlow";
     }
   }
-}
-
-.sidenav-btn {
-  @extend %flex-center;
-  width: 1.8rem;
-  height: 1.7rem;
-  background: transparent;
-  background-image: url("../assets/shared/mobile/icon-hamburger.svg");
-  background-size: contain;
-  border: none;
-  cursor: pointer;
-  z-index: 30;
-
-  &.close {
-    background-image: url("../assets/shared/mobile/icon-close.svg");
-  }
-
-  @media (min-width: $breakpoint-tablet) {
-    display: none;
-  }
-}
-
-.sidenav.active {
-  top: 6rem;
 }

@@ -38,6 +38,14 @@
         }
       }
 
+      &.error {
+        color: #e63946;
+
+        & > span {
+          color: #e63946;
+        }
+      }
+
       &:hover {
         color: #858a90;
 

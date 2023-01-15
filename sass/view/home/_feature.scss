@@ -5,11 +5,6 @@
   @extend %flex-column;
   color: $text-white-700;
 
-  h3 {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-  }
-
   @include desktop-feature {
     width: 100%;
     max-width: 128rem;
@@ -27,13 +22,13 @@
       padding: 6.4rem 2.4rem 0 2.4rem;
     }
 
-    p {
+    &--text {
       max-width: 540px;
       @extend %text-opacity;
     }
   }
 
-  &__wrapper {
+  &__container {
     @include flex-column($gap: $gap-24, $align-items: center);
     position: relative;
     padding: 3.6rem 2.4rem 0 2.4rem;
@@ -51,74 +46,79 @@
       justify-content: center;
       gap: $gap-30;
     }
+  }
 
-    &--bg {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      min-height: calc(44.2rem + (27.9rem / 2));
-      background-image: url("../assets/about/mobile/bg-quality.png");
-      border-radius: 0 0 1rem 1rem;
-      z-index: 10;
+  &__card {
+    @include flex-column(
+      $gap: $gap-56,
+      $align-items: center,
+      $justify-content: center
+    );
+    width: 100%;
+    min-height: 38.2rem;
+    background: $bg-green;
+    border-radius: $rounded-sm;
+    z-index: 20;
 
-      @include tablet-feature {
-        min-height: 380px;
-        background: $bg-darkBlue-500;
-        background-image: none;
-      }
-
-      @include desktop {
-        min-height: 280px;
-      }
+    @include tablet-feature {
+      flex-direction: initial;
+      justify-content: space-between;
+      padding: 0 4.8rem;
+      min-height: 18rem;
     }
 
-    &--article {
+    @include desktop-feature {
       @include flex-column(
         $gap: $gap-56,
         $align-items: center,
         $justify-content: center
       );
-      width: 100%;
+      max-width: 350px;
       min-height: 38.2rem;
-      background: $bg-green;
-      border-radius: $rounded-sm;
-      z-index: 20;
+      padding: 0.8rem;
+    }
+
+    &--wrapper {
+      @include flex-column($gap: $gap-24);
+      text-align: center;
+      max-width: 80%;
 
       @include tablet-feature {
-        flex-direction: initial;
-        justify-content: space-between;
-        padding: 0 4.8rem;
-        min-height: 18rem;
+        text-align: initial;
+        gap: $gap-16;
+        max-width: 34.4rem;
       }
 
       @include desktop-feature {
-        @include flex-column(
-          $gap: $gap-56,
-          $align-items: center,
-          $justify-content: center
-        );
-        max-width: 350px;
-        min-height: 38.2rem;
-        padding: 0.8rem;
-      }
-
-      div {
-        @include flex-column($gap: $gap-24);
         text-align: center;
-        max-width: 80%;
-
-        @include tablet-feature {
-          text-align: initial;
-          gap: $gap-16;
-          max-width: 34.4rem;
-        }
-
-        @include desktop-feature {
-          text-align: center;
-          max-width: 25.5rem;
-        }
+        max-width: 25.5rem;
       }
+
+      h3 {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
+      }
+    }
+  }
+
+  &__patern {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: calc(44.2rem + (27.9rem / 2));
+    background-image: url("../assets/about/mobile/bg-quality.png");
+    border-radius: 0 0 1rem 1rem;
+    z-index: 10;
+
+    @include tablet-feature {
+      min-height: 380px;
+      background: $bg-darkBlue-500;
+      background-image: none;
+    }
+
+    @include desktop {
+      min-height: 280px;
     }
   }
 }

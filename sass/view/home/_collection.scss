@@ -5,7 +5,7 @@
   position: relative;
   margin: auto;
 
-  h2 {
+  &__title {
     line-height: 7.2rem;
     color: $text-transparent;
     background: $title-gradient;
@@ -33,12 +33,7 @@
     }
   }
 
-  h3 {
-    font-size: 2.4rem;
-    line-height: 3.2rem;
-  }
-
-  &__wrapper {
+  &__container {
     @include flex-column($gap: $gap-48);
 
     @include desktop {
@@ -47,55 +42,60 @@
       padding-top: 8rem;
       z-index: 10;
     }
+  }
 
-    &--article {
-      @include flex-column(2.4rem, center);
-      text-align: center;
+  &__article {
+    @include flex-column(2.4rem, center);
+    text-align: center;
+
+    @include tablet {
+      @include flex(
+        $gap: $gap-36,
+        $justify-content: center,
+        $align-items: center
+      );
+      text-align: initial;
+    }
+
+    @include desktop {
+      max-width: 255px;
+      @include flex-column(7.1rem, center);
+    }
+
+    &--picture {
+      width: 100%;
+      max-width: 20rem;
 
       @include tablet {
-        @include flex(
-          $gap: $gap-36,
-          $justify-content: center,
-          $align-items: center
-        );
-        text-align: initial;
+        max-width: 25.5rem;
+      }
+    }
+
+    &--wrapper {
+      @include flex-column($gap: $gap-16, $align-items: center);
+      max-width: 282px;
+      color: $text-grey-700;
+
+      @include tablet {
+        align-items: initial;
+        gap: $gap-24;
       }
 
       @include desktop {
-        max-width: 255px;
-        @include flex-column(7.1rem, center);
+        align-items: center;
+        gap: $gap-24;
       }
 
-      img {
-        width: 100%;
-        max-width: 20rem;
-
-        @include tablet {
-          max-width: 25.5rem;
-        }
+      h3 {
+        font-size: 2.4rem;
+        line-height: 3.2rem;
       }
 
-      div {
-        @include flex-column($gap: $gap-16, $align-items: center);
-        max-width: 282px;
-        color: $text-grey-700;
-
-        @include tablet {
-          align-items: initial;
-          gap: $gap-24;
-        }
+      p {
+        width: clamp(20rem, 100%, 28.2rem);
 
         @include desktop {
-          align-items: center;
-          gap: $gap-24;
-        }
-
-        p {
-          width: clamp(20rem, 100%, 28.2rem);
-
-          @include desktop {
-            text-align: center;
-          }
+          text-align: center;
         }
       }
     }

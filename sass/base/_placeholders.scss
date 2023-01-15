@@ -35,6 +35,14 @@
   gap: $gap;
 }
 
+@mixin flex-row($gap: 0, $align-items: initial, $justify-content: initial) {
+  display: flex;
+  flex-direction: row;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  gap: $gap;
+}
+
 @mixin flex-center($gap: 0) {
   display: flex;
   justify-content: center;

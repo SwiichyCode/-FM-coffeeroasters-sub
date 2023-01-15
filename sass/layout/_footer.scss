@@ -29,7 +29,7 @@
     }
 
     @include desktop {
-      gap: 102px;
+      @include flex-row($gap: 10.2rem);
       flex-direction: initial;
     }
   }
@@ -47,8 +47,7 @@
       @include flex-column($gap: $gap-24, $align-items: center);
 
       @include tablet {
-        flex-direction: initial;
-        gap: $gap-32;
+        @include flex-row($gap: $gap-32);
       }
 
       a {
@@ -70,6 +69,11 @@
     height: 2.4rem;
     ul {
       @include flex-center($gap: $gap-24);
+    }
+
+    a {
+      width: 2.4rem;
+      @extend %flex-center;
     }
 
     svg {

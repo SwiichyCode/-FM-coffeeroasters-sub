@@ -2,6 +2,10 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta
+      name="description"
+      content="Discover the rich and bold taste of our premium coffee beans. Shop our wide selection of blends and single origin coffees at our online coffee store. Freshly roasted and delivered straight to your door."
+    />
     <link rel="icon" type="image/svg+xml" href="vite.svg" />
     <link rel="stylesheet" href="sass/main.scss" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -11,7 +15,7 @@
       rel="stylesheet"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee roasters</title>
+    <title>Coffee roasters - About</title>
   </head>
   <body>
     <div class="container">
@@ -27,10 +31,14 @@
         </a>
         <button class="sidenav-btn"></button>
         <nav class="sidenav">
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="subscribe.html">Create Your Plan</a></li>
+          <ul class="sidenav__list">
+            <li><a class="sidenav__link" href="/">Home</a></li>
+            <li><a class="sidenav__link" href="about.html">About Us</a></li>
+            <li>
+              <a class="sidenav__link" href="subscribe.html"
+                >Create Your Plan</a
+              >
+            </li>
           </ul>
         </nav>
       </header>
@@ -52,8 +60,8 @@
 
         <!-- Commitment -->
         <section class="commitment">
-          <div class="commitment__image"></div>
-          <article>
+          <div class="commitment__picture"></div>
+          <article class="commitment__article">
             <h2>Our commitment</h2>
             <p>
               We’re built on a simple mission and a commitment to doing good
@@ -75,7 +83,7 @@
         <!-- Quality -->
         <section class="quality">
           <div class="quality__image"></div>
-          <article>
+          <article class="quality__article">
             <h2>Uncompromising quality</h2>
             <p>
               Although we work with growers who pay close attention to all
@@ -90,15 +98,16 @@
 
         <!-- Headquarters -->
         <section class="headquarters">
-          <h2>Our headquarters</h2>
-          <div class="headquarters__wrapper">
-            <article>
+          <h2 class="headquarters__title">Our headquarters</h2>
+          <div class="headquarters__container">
+            <article class="headquarters__article">
               <img
                 src="assets/about/desktop/illustration-uk.svg"
                 alt="uk-illustration"
                 loading="lazy"
+                class="headquarters__article--img"
               />
-              <div>
+              <div class="headquarters__article--wrapper">
                 <h3>United Kingdom</h3>
                 <ul>
                   <li>68 Asfordby Rd</li>
@@ -108,13 +117,14 @@
                 </ul>
               </div>
             </article>
-            <article>
+            <article class="headquarters__article">
               <img
                 src="assets/about/desktop/illustration-canada.svg"
                 alt="canada-illustration"
                 loading="lazy"
+                class="headquarters__article--img"
               />
-              <div>
+              <div class="headquarters__article--wrapper">
                 <h3>Canada</h3>
                 <ul>
                   <li>1528 Eglinton Avenue</li>
@@ -124,13 +134,14 @@
                 </ul>
               </div>
             </article>
-            <article>
+            <article class="headquarters__article">
               <img
                 src="assets/about/desktop/illustration-australia.svg"
                 alt="australia-illustration"
                 loading="lazy"
+                class="headquarters__article--img"
               />
-              <div>
+              <div class="headquarters__article--wrapper">
                 <h3>Australia</h3>
                 <ul>
                   <li>36 Swanston Street</li>

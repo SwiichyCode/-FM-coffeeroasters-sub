@@ -11,7 +11,7 @@
     margin: auto;
   }
 
-  h2 {
+  &__title {
     color: $text-grey;
     font-size: 2.4rem;
     line-height: 3.2rem;
@@ -21,17 +21,19 @@
     }
   }
 
-  &__wrapper {
+  &__container {
     @include flex-column($gap: $gap-80, $align-items: center);
 
     @include tablet {
-      flex-direction: initial;
-      justify-content: space-between;
-      gap: 10px;
+      @include flex(
+        $gap: 1rem,
+        $align-items: center,
+        $justify-content: space-between
+      );
     }
   }
 
-  article {
+  &__article {
     @include flex-column($gap: $gap-48, $align-items: center);
     text-align: center;
 
@@ -46,11 +48,11 @@
       }
     }
 
-    img {
+    &--img {
       width: min-content;
     }
 
-    div {
+    &--wrapper {
       @include flex-column($gap: $gap-22);
       color: $text-grey-700;
     }

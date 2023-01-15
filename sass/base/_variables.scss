@@ -3,6 +3,7 @@ $color-green: #0e8784;
 $color-green-200: #66d2cf;
 $color-darkBlue: #333d4b;
 $color-darkblue-500: #2c343e;
+$color-darkblue-600: #272e37;
 $color-paleOrange: #fdd6ba;
 $color-lightCream: #fefcf7;
 $color-white: #ffffff;
@@ -19,6 +20,7 @@ $bg-green: $color-green;
 $bg-paleOrange: $color-paleOrange;
 $bg-lightCream: $color-lightCream;
 $bg-darkBlue-500: $color-darkblue-500;
+$bg-tutorial: $color-darkblue-600;
 
 $text-white: $color-white;
 $text-white-700: $color-lightCream;
@@ -43,7 +45,15 @@ $sidebar-gradient: linear-gradient(
   #fefcf7 55.94%
 );
 
-$gap-120: 12rem;
+$gap-main-mobile: 12rem;
+$gap-main-tablet: 14.4rem;
+$gap-main-desktop: 20rem;
+
+$padding-container-mobile: 3.2rem 2.4rem 7.2rem 2.4rem;
+$padding-container-tablet: 4rem 3.9rem 7.2rem 4rem;
+$padding-container-desktop: 4.35rem 8rem 7.2rem 8rem;
+
+$gap-120: 12rem; // _container/
 $gap-110: 11rem;
 $gap-80: 8rem;
 $gap-72: 7.2rem;
