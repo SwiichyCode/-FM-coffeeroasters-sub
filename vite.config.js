@@ -6,8 +6,8 @@ export default defineConfig({
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),
-        about: resolve(__dirname, "about.html"),
-        subscribe: resolve(__dirname, "subscribe.html"),
+        about: resolve(__dirname, "pages/about.html"),
+        subscribe: resolve(__dirname, "pages/subscribe.html"),
       },
     },
   },
